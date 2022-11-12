@@ -27,3 +27,14 @@ export const CheckSession = async () => {
     throw error
   }
 }
+
+export const CreateReview = async (data) => {
+  try {
+    const res = await Client.post(
+      '/reviews/new_review/user/:user_id/zodiac_id/:zodiac_id'
+    )
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
