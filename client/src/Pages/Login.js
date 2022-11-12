@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { SignInUser } from '../../../services/Auth'
 
-const Signin = ({ toggleAuthenticated, setUser }) => {
+const Login = ({ toggleAuthenticated, setUser }) => {
   const navigate = useNavigate()
   const [formValues, setFormValues] = useState({ username: '', password: '' })
 
@@ -27,7 +27,7 @@ const Signin = ({ toggleAuthenticated, setUser }) => {
             <input
               onChange={handleChange}
               name="username"
-              type="text"
+              type="username"
               placeholder="exampleUserName"
               value={formValues.username}
               required
@@ -37,7 +37,7 @@ const Signin = ({ toggleAuthenticated, setUser }) => {
             <label htmlFor="password">Password</label>
             <input
               onChange={handleChange}
-              type="text"
+              type="password"
               name="password"
               value={formValues.password}
               required
@@ -52,4 +52,4 @@ const Signin = ({ toggleAuthenticated, setUser }) => {
   )
 }
 
-export default Signin
+export default Login

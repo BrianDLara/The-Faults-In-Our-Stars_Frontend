@@ -15,7 +15,7 @@ const Nav = () => {
           <Link to ={`/`}><img src="/images/logo1.png" alt="website logo" className='logo'/></Link>
           <div id='links-container'>
               <NavLink to = '/' className="nav-link"> Home </NavLink>
-              <NavLink to = '/signin' className="nav-link"> Sign In </NavLink>
+              <NavLink to = '/register' className="nav-link"> Register </NavLink>
               <NavLink to = '/login' className="nav-link"> Login </NavLink>
               <NavLink to = '/zodiacs' className="nav-link"> Zodiac Signs </NavLink>
               <NavLink to = '/profile' className="nav-link"> Profile </NavLink>

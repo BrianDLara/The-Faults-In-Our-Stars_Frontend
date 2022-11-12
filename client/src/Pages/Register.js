@@ -85,6 +85,58 @@ const Register = () => {
               required
             />
           </div>
+          <div className="image">
+            <div className="image-label-container">
+              <label htmlFor="image">Image</label>
+            </div>
+            <input
+              onChange={handleChange}
+              name="image"
+              type="image"
+              placeholder="Image"
+              value={formValues.image}
+              required
+            />
+          </div>
+          <div className="description">
+            <div className="description-label-container">
+              <label htmlFor="description">Description</label>
+            </div>
+            <input
+              onChange={handleChange}
+              name="description"
+              cols="55"
+              rows="10"
+              placeholder="Description"
+              value={formValues.description}
+            />
+          </div>
+          <div className="phoneNumber">
+            <div className="phoneNumber-label-container">
+              <label htmlFor="phoneNumber">Phone Number</label>
+            </div>
+            <input
+              onChange={handleChange}
+              name="phoneNumber"
+              type="tel"
+              placeholder="Phone Number"
+              value={formValues.phoneNumber}
+              required
+            />
+          </div>
+          <div className="gender">
+            <div className="gender-label-container">
+              <label htmlFor="gender">Gender</label>
+            </div>
+            <input
+              onChange={handleChange}
+              name="gender"
+              type="text"
+              placeholder="Gender"
+              value={formValues.gender}
+              required
+            />
+          </div>
           <div className="username">
             <div className="username-label-container">
               <label htmlFor="username">Username</label>

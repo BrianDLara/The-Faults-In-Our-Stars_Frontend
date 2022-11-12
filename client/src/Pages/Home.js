@@ -14,6 +14,7 @@ const Home = () => {
         `https://the-faults-in-our-stars.herokuapp.com/api/users`
       )
       setUsers(response.data)
+      console.log(response.data)
     }
     getUsers()
   }, [])
