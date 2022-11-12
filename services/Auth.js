@@ -46,3 +46,12 @@ export const UpdateReview = async (data) => {
     throw error
   }
 }
+
+export const DestroyReview = async (data) => {
+  try {
+    const res = await Client.delete(`/reviews/${data}`)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
