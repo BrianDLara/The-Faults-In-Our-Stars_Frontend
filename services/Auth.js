@@ -38,3 +38,11 @@ export const CreateReview = async (data) => {
     throw error
   }
 }
+
+export const UpdateReview = async (data) => {
+  try {
+    const res = await Client.put(`/reviews/${data.id}`, data)
+  } catch (error) {
+    throw error
+  }
+}
