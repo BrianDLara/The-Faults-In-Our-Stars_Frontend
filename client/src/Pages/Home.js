@@ -29,6 +29,7 @@ const Home = () => {
             profilePic={user.image}
             firstName={user.firstName}
             lastName={user.lastName}
+            zodiacName={user.user_sign.name}
           />
         </Link>
       ))}

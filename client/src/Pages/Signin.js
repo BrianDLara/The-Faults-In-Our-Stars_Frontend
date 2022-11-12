@@ -13,12 +13,43 @@ const Signin = ({ toggleAuthenticated, setUser }) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const payload = await SignInUser(formValues)
-    setFormValues({ email: '', password: '' })
+    setFormValues({ username: '', password: '' })
     setUser(payload)
     toggleAuthenticated(true)
     navigate('/')
   }
-  return <div>Signin</div>
+  return (
+    <div className="signin col">
+      <div className="card-overlay">
+        <form onSubmit={handleSubmit}>
+          <div className="input-wrapper">
+            <label htmlFor="username">Username</label>
+            <input
+              onChange={handleChange}
+              name="username"
+              type="username"
+              placeholder="exampleUserName"
+              value={formValues.username}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="password">Password</label>
+            <input
+              onChange={handleChange}
+              type="password"
+              name="password"
+              value={formValues.password}
+              required
+            />
+          </div>
+          <button disabled={!formValues.email || !formValues.password}>
+            Sign In
+          </button>
+        </form>
+      </div>
+    </div>
+  )
 }
 
 export default Signin
