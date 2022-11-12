@@ -22,7 +22,7 @@ const Home = () => {
     <div id="Home">
       <h1>Zodiac Users</h1>
       {users.map((user) => (
-        <Link to={`/user_details`}>
+        <Link to={`/user_details/${user.id}`}>
           <User
             key={user.id}
             id={user.id}

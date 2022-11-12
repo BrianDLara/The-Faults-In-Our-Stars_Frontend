@@ -5,7 +5,7 @@ import Nav from './components/Nav'
 import Zodiacs from './Pages/Zodiacs'
 import ZodiacDetails from './Pages/ZodiacDetails'
 import ReviewForm from './Pages/ReviewForm'
-import User from './'
+import User from './components/User'
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/zodiacs" element={<Zodiacs />} />
-          <Route path="/user_details" element={<User />} />
+          <Route path="/user_details/:user_id" element={<User />} />
           <Route path="/zodiacs/details" element={<ZodiacDetails />} />
           <Route path="/zodiacs/details/form" element={<ReviewForm />} />
         </Routes>
