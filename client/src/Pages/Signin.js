@@ -13,8 +13,10 @@ const Signin = ({ toggleAuthenticated, setUser }) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const payload = await SignInUser(formValues)
+    setFormValues({ email: '', password: '' })
+    setUser(payload)
     toggleAuthenticated(true)
-    navigate('')
+    navigate('/')
   }
   return <div>Signin</div>
 }
