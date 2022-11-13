@@ -82,3 +82,53 @@ color: #6885bf;
   align-items: center;
 }
 
+/* Register page */
+
+/* login page */
+.login-container, .register-container{
+  position: absolute;
+  margin: auto;
+  width: 40rem;
+  height: 30rem;
+  top:10rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: rgb(215,129,106);
+  background: linear-gradient(100deg, rgba(215,129,106,1) 0%, rgba(134,22,87,1) 100%);
+  border-radius: 10px;
+  border: 2px solid rgb(147, 147, 147);
+}
+
+.form-items{
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 2rem 1rem;
+}
+
+.input-wrapper{
+  padding: 1.5rem 2rem;
+  font-size: 1.8rem;
+}
+
+.input{
+  margin: 0 .7rem;
+  padding: .1rem .5rem;
+  border-radius: 5px;
+
+  font-size: 1.3rem;
+}
+
+.form-button{
+  color: white;
+  background-color: #3F3F3F;
+  border-radius: 5px;
+
+  margin: 0 10rem;
+  margin-top: 8rem;
+  padding: .5rem 1rem;
+  border: 2px solid rgb(116, 115, 115);
+
+  font-size: 1.5rem;
+}

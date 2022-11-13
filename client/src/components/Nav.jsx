@@ -12,7 +12,7 @@ const Nav = () => {
       </span>
         
         <div id='nav-content'>  
-          <Link to ={`/`}><img src="/images/logo1.png" alt="website logo" className='logo'/></Link>
+          <Link to ={`/`}><img src="https://i.imgur.com/7O8c7S6.png" alt="website logo" className='logo'/></Link>
           <div id='links-container'>
               <NavLink to = '/' className="nav-link"> Home </NavLink>
               <NavLink to = '/register' className="nav-link"> Register </NavLink>

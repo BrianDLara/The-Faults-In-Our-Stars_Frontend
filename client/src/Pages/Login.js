@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { SignInUser } from '../../../services/Auth'
+import { useNavigate, Link } from 'react-router-dom'
+import { SignInUser } from '../services/Auth'
 
 const Login = ({ toggleAuthenticated, setUser }) => {
   const navigate = useNavigate()
@@ -19,17 +19,18 @@ const Login = ({ toggleAuthenticated, setUser }) => {
     navigate('/')
   }
   return (
-    <div className="signin col">
+    <div className="login-container">
       <div className="card-overlay">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form-items">
           <div className="input-wrapper">
             <label htmlFor="username">Username</label>
             <input
               onChange={handleChange}
               name="username"
               type="username"
-              placeholder="exampleUserName"
+              placeholder="UserName"
               value={formValues.username}
+              className="input"
               required
             />
           </div>
@@ -39,12 +40,17 @@ const Login = ({ toggleAuthenticated, setUser }) => {
               onChange={handleChange}
               type="password"
               name="password"
+              placeholder="*********"
               value={formValues.password}
+              className="input"
               required
             />
           </div>
-          <button disabled={!formValues.email || !formValues.password}>
-            Sign In
+          <button
+            disabled={!formValues.username || !formValues.password}
+            className="form-button"
+          >
+            Login
           </button>
         </form>
       </div>

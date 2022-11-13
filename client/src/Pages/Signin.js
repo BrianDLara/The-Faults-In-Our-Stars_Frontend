@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { SignInUser } from '../../../services/Auth'
+import { SignInUser } from '../services/Auth'
 
 const Signin = ({ toggleAuthenticated, setUser }) => {
   const navigate = useNavigate()
@@ -19,7 +19,7 @@ const Signin = ({ toggleAuthenticated, setUser }) => {
     navigate('/')
   }
   return (
-    <div className="signin col">
+    <div className="signin-container">
       <div className="card-overlay">
         <form onSubmit={handleSubmit}>
           <div className="input-wrapper">
@@ -43,7 +43,10 @@ const Signin = ({ toggleAuthenticated, setUser }) => {
               required
             />
           </div>
-          <button disabled={!formValues.email || !formValues.password}>
+          <button
+            type="submit"
+            disabled={!formValues.email || !formValues.password}
+          >
             Sign In
           </button>
         </form>

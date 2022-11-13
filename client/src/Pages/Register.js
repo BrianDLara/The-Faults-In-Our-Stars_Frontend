@@ -43,7 +43,7 @@ const Register = () => {
   }
 
   return (
-    <div className="register-form-container">
+    <div className="register-container">
       <form className="register-form form" onSubmit={handleSubmit}>
         <div className="grid">
           <div className="first-name">
@@ -79,7 +79,7 @@ const Register = () => {
             <input
               onChange={handleChange}
               name="email"
-              type="email"
+              type="text"
               placeholder="Email"
               value={formValues.email}
               required
@@ -92,7 +92,7 @@ const Register = () => {
             <input
               onChange={handleChange}
               name="image"
-              type="image"
+              type="text"
               placeholder="Image"
               value={formValues.image}
               required
@@ -118,7 +118,7 @@ const Register = () => {
             <input
               onChange={handleChange}
               name="phoneNumber"
-              type="tel"
+              type="text"
               placeholder="Phone Number"
               value={formValues.phoneNumber}
               required
@@ -157,7 +157,7 @@ const Register = () => {
             <input
               onChange={handleChange}
               name="password"
-              type="password"
+              type="text"
               placeholder="Password"
               value={formValues.password}
               required
