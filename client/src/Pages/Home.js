@@ -10,9 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     const getUsers = async () => {
-      const response = await axios.get(
-        `https://the-faults-in-our-stars.herokuapp.com/api/users`
-      )
+      const response = await axios.get(`https://localhost:3001/api/users`)
       setUsers(response.data)
     }
     getUsers()
