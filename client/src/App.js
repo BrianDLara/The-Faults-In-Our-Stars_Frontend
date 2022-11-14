@@ -13,6 +13,7 @@ import Register from './Pages/Register'
 import Login from './Pages/Login'
 import Profile from './Pages/Profile'
 import AboutUs from './Pages/AboutUs'
+import UserProfile from './Pages/UserPage'
 
 function App() {
   return (
@@ -29,9 +30,12 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/user_details/:user_id" element={<User />} />
-            <Route path="/zodiacs/details" element={<ZodiacDetails />} />
+            <Route
+              path="/user_details/:userId/user_profile"
+              element={<UserProfile />}
+            />
             <Route path="/zodiacs/details/form" element={<ReviewForm />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/zodiacs/details/:id" element={<ZodiacDetails />} />
             <Route path="/about_us" element={<AboutUs />} />
           </Routes>
         </main>

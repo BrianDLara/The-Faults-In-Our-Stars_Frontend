@@ -172,7 +172,7 @@ h2, h3, h4{
   justify-content: space-between;
   overflow-y: hidden;
   width: 45%;
-  height: 40rem;
+  height: 45rem;
 
   background: rgb(215,129,106);
   background: linear-gradient(100deg, rgba(215,129,106,1) 0%, rgba(134,22,87,1) 100%);
@@ -338,6 +338,55 @@ input::file-selector-button{
   font-size: 2rem;
 }
 
+/* User */
+.user-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 3rem auto;
+
+}
+
+.user-txt-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+/* Zodiac Signs Page */
+.zodiac-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center;
+  margin: 5rem auto;
+  padding-bottom: 0rem;
+  
+  width: 30%;
+  height: 35rem;
+
+  border: 1px solid rgb(207, 203, 203);
+border-radius: 6px;
+}
+
+#zodiac-pic{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  width:100%;
+ 
+}
+
+#zodiac-name{
+margin: 5rem 0 2rem;
+font-size: 3rem;
+}
+
+
+
 @media (max-width: 1360px){
 
 /* Register page */
@@ -348,7 +397,7 @@ input::file-selector-button{
 .form-items{
   justify-content:flex-start;
   width: 60%;
-  height: 44rem;
+  height: 48rem;
  
 
 }
@@ -451,7 +500,7 @@ textarea{
 
 .form-items{
   width: 60%;
-  height: 44rem;
+  height: 50rem;
   margin: 3rem 1rem 3rem 1rem;
  
 

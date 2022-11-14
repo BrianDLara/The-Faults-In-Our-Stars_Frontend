@@ -10,6 +10,7 @@ const Register = () => {
     email: '',
     image: '',
     description: '',
+    zodiacId: '',
     phoneNumber: '',
     gender: '',
     username: '',
@@ -48,6 +49,7 @@ const Register = () => {
       email: formValues.email,
       image: formValues.image,
       description: formValues.description,
+      zodiacId: formValues.zodiacId,
       phoneNumber: formValues.phoneNumber,
       gender: formValues.gender,
       username: formValues.username,
@@ -184,8 +186,9 @@ const Register = () => {
               className="text-input-bio"
             />
           </div>
-
-          <div className="single-field-container user-container">
+        </section>
+        <section className="section-container">
+          <div className="field-container">
             <div className="field-text">
               <label htmlFor="username">Username</label>
             </div>
@@ -198,6 +201,34 @@ const Register = () => {
               className="text-input"
               required
             />
+          </div>
+
+          <div className="field-container">
+            <div className="field-text">
+              <label htmlFor="gender">Zodiac Sign:</label>
+            </div>
+            <select
+              onChange={handleChange}
+              name="zodiac"
+              value={formValues.zodiacId}
+              className="text-input"
+              id="other-option"
+              required
+            >
+              <option>Choose a sign</option>
+              <option value="1">Gemini</option>
+              <option value="2">Aries</option>
+              <option value="3">Taurus</option>
+              <option value="4">Cancer</option>
+              <option value="5">Leo</option>
+              <option value="6">Virgo</option>
+              <option value="7">Libra</option>
+              <option value="8">Scorpio</option>
+              <option value="9">Sagittarius</option>
+              <option value="10">Capricorn</option>
+              <option value="11">Aquarius</option>
+              <option value="12">Pisces</option>
+            </select>
           </div>
         </section>
         <section className="section-container">

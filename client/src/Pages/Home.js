@@ -14,7 +14,6 @@ const Home = () => {
         `https://the-faults-in-our-stars.herokuapp.com/api/users`
       )
       setUsers(response.data)
-      console.log(response.data)
     }
     getUsers()
   }, [])
@@ -23,7 +22,7 @@ const Home = () => {
     <div id="Home">
       <h1>Zodiac Users</h1>
       {users.map((user) => (
-        <Link to={`/user_details/${user.id}`}>
+        <Link to={`/user_details/${user.id}/user_profile`}>
           <User
             key={user.id}
             id={user.id}
