@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     const getUsers = async () => {
-      const response = await axios.get(`https://localhost:3001/api/users`)
+      const response = await axios.get(`http://localhost:3001/api/users`)
       setUsers(response.data)
     }
     getUsers()
