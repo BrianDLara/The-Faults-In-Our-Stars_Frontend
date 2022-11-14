@@ -165,12 +165,14 @@ h2, h3, h4{
   flex-direction: column;
   text-align:center;
   align-items: center;
+  margin-top: 4.5rem;
 }
 
 .form-items{
   justify-content: space-between;
-  width: 50%;
-  height: 35rem;
+  overflow-y: hidden;
+  width: 45%;
+  height: 40rem;
 
   background: rgb(215,129,106);
   background: linear-gradient(100deg, rgba(215,129,106,1) 0%, rgba(134,22,87,1) 100%);
@@ -182,7 +184,7 @@ h2, h3, h4{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 1rem 2rem;
+  margin: 3rem 2rem;
   gap: 1rem;
   text-align: left;
 }
@@ -227,10 +229,30 @@ h2, h3, h4{
   margin-top: 2rem;
 }
 
+input[type="file"] {
+  border-radius: 6px;
+  color: white;
+  cursor:pointer
+}
+
+input::file-selector-button{
+  padding: .2rem 1.4rem;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  color: white;
+  background-color: #3F3F3F;
+  border: 2px solid rgb(116, 115, 115);
+
+  font-size: .8rem;
+}
+
+
 .submit-button{
   color: white;
   background-color: #3F3F3F;
   border-radius: 5px;
+  cursor: pointer;
 
   margin: 1.5rem 10rem 2rem;
   padding: .5rem 4rem;
@@ -284,6 +306,7 @@ h2, h3, h4{
   color: white;
   background-color: #3F3F3F;
   border-radius: 5px;
+  cursor: pointer;
 
   margin: 3rem 10rem 3rem;
   padding: .5rem 3rem;

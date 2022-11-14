@@ -21,7 +21,22 @@ const Register = () => {
 
   let navigate = useNavigate()
 
+  const writeGender = () => {
+    if (
+      document.getElementById('other-option').value === "What's your gender?"
+    ) {
+      document.getElementById('gender-input').value = ' '
+      document.getElementById('gender-input').style.display = 'block'
+    } else if (
+      document.getElementById('other-option').value === 'Male' ||
+      document.getElementById('other-option').value === 'Female'
+    ) {
+      document.getElementById('gender-input').style.display = 'none'
+    }
+  }
+
   const handleChange = (e) => {
+    writeGender()
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
 
@@ -112,16 +127,30 @@ const Register = () => {
         <section className="section-container">
           <div className="field-container">
             <div className="field-text">
-              <label htmlFor="gender">Gender</label>
+              <label htmlFor="gender">Gender:</label>
             </div>
+            <select
+              onChange={handleChange}
+              name="gender"
+              value={formValues.gender}
+              className="text-input"
+              id="other-option"
+              required
+            >
+              <option>I am a</option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+              <option value="What's your gender?">Other</option>
+            </select>
             <input
               onChange={handleChange}
               name="gender"
               type="text"
-              placeholder="Gender"
+              placeholder="What's your gender?"
               value={formValues.gender}
               className="text-input"
-              required
+              id="gender-input"
+              style={{ display: 'none' }}
             />
           </div>
           <div className="field-container">
@@ -131,8 +160,9 @@ const Register = () => {
             <input
               onChange={handleChange}
               name="image"
-              type="text"
-              placeholder="Image"
+              type="file"
+              id="image-input"
+              placeholder="Choose an image"
               value={formValues.image}
               className="text-input"
               required
