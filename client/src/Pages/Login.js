@@ -21,14 +21,14 @@ const Login = ({ toggleAuthenticated, setUser }) => {
   return (
     <div className="login-container">
       <div className="card-overlay">
-        <form onSubmit={handleSubmit} className="form-items">
+        <form onSubmit={handleSubmit} className="login-form">
           <div className="input-wrapper">
             <label htmlFor="username">Username</label>
             <input
               onChange={handleChange}
               name="username"
               type="username"
-              placeholder="UserName"
+              placeholder="Username"
               value={formValues.username}
               className="input"
               required
@@ -52,6 +52,12 @@ const Login = ({ toggleAuthenticated, setUser }) => {
           >
             Login
           </button>
+          <span id="register-container">
+            <h3>Haven't made an account yet? &nbsp;</h3>
+            <Link to="/register">
+              <h3>Register Here</h3>
+            </Link>
+          </span>
         </form>
       </div>
     </div>

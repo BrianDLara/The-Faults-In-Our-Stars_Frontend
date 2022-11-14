@@ -44,11 +44,13 @@ const Register = () => {
 
   return (
     <div className="register-container">
-      <form className="register-form form" onSubmit={handleSubmit}>
-        <div className="grid">
-          <div className="first-name">
-            <div className="firstName-label-container">
-              <label htmlFor="firstName">First Name</label>
+      <form className="form-items" onSubmit={handleSubmit}>
+        {/* new user first and last name */}
+        <section className="section-container top-section">
+          {/* first name section */}
+          <div className="field-container">
+            <div className="field-text">
+              <label htmlFor="firstName">First Name:</label>
             </div>
             <input
               onChange={handleChange}
@@ -56,12 +58,14 @@ const Register = () => {
               type="text"
               placeholder="First Name"
               value={formValues.firstName}
+              className="text-input"
               required
             />
           </div>
-          <div className="last-name">
-            <div className="lastName-label-container">
-              <label htmlFor="lastName">Last Name</label>
+          {/* last name section */}
+          <div className="field-container">
+            <div className="field-text">
+              <label htmlFor="lastName">Last Name: </label>
             </div>
             <input
               onChange={handleChange}
@@ -69,11 +73,15 @@ const Register = () => {
               type="text"
               placeholder="Last Name"
               value={formValues.lastName}
+              className="text-input"
               required
             />
           </div>
-          <div className="email">
-            <div className="email-label-container">
+        </section>
+        {/* contact info */}
+        <section className="section-container">
+          <div className="field-container">
+            <div className="field-text">
               <label htmlFor="email">Email Address</label>
             </div>
             <input
@@ -82,37 +90,12 @@ const Register = () => {
               type="text"
               placeholder="Email"
               value={formValues.email}
+              className="text-input"
               required
             />
           </div>
-          <div className="image">
-            <div className="image-label-container">
-              <label htmlFor="image">Image</label>
-            </div>
-            <input
-              onChange={handleChange}
-              name="image"
-              type="text"
-              placeholder="Image"
-              value={formValues.image}
-              required
-            />
-          </div>
-          <div className="description">
-            <div className="description-label-container">
-              <label htmlFor="description">Description</label>
-            </div>
-            <input
-              onChange={handleChange}
-              name="description"
-              cols="55"
-              rows="10"
-              placeholder="Description"
-              value={formValues.description}
-            />
-          </div>
-          <div className="phoneNumber">
-            <div className="phoneNumber-label-container">
+          <div className="field-container">
+            <div className="field-text">
               <label htmlFor="phoneNumber">Phone Number</label>
             </div>
             <input
@@ -121,11 +104,14 @@ const Register = () => {
               type="text"
               placeholder="Phone Number"
               value={formValues.phoneNumber}
+              className="text-input"
               required
             />
           </div>
-          <div className="gender">
-            <div className="gender-label-container">
+        </section>
+        <section className="section-container">
+          <div className="field-container">
+            <div className="field-text">
               <label htmlFor="gender">Gender</label>
             </div>
             <input
@@ -134,11 +120,43 @@ const Register = () => {
               type="text"
               placeholder="Gender"
               value={formValues.gender}
+              className="text-input"
               required
             />
           </div>
-          <div className="username">
-            <div className="username-label-container">
+          <div className="field-container">
+            <div className="field-text">
+              <label htmlFor="image">Image</label>
+            </div>
+            <input
+              onChange={handleChange}
+              name="image"
+              type="text"
+              placeholder="Image"
+              value={formValues.image}
+              className="text-input"
+              required
+            />
+          </div>
+        </section>
+        <section className="single-section-container">
+          <div className="single-field-container">
+            <div className="field-text">
+              <label htmlFor="description">Bio:</label>
+            </div>
+            <textarea
+              onChange={handleChange}
+              name="description"
+              cols="60"
+              rows="3"
+              placeholder="Write a short description about yourself"
+              value={formValues.description}
+              className="text-input-bio"
+            />
+          </div>
+
+          <div className="single-field-container user-container">
+            <div className="field-text">
               <label htmlFor="username">Username</label>
             </div>
             <input
@@ -147,11 +165,14 @@ const Register = () => {
               type="text"
               placeholder="username"
               value={formValues.username}
+              className="text-input"
               required
             />
           </div>
-          <div className="password">
-            <div className="password-label-container">
+        </section>
+        <section className="section-container">
+          <div className="field-container">
+            <div className="field-text">
               <label htmlFor="password">Password</label>
             </div>
             <input
@@ -160,12 +181,13 @@ const Register = () => {
               type="text"
               placeholder="Password"
               value={formValues.password}
+              className="text-input"
               required
             />
           </div>
-          <div className="confirm-password">
-            <div className="confirmPassword-label-container">
-              <label htmlFor="confirmPassword">Password Confirmation</label>
+          <div className="field-container">
+            <div className="field-text">
+              <label htmlFor="confirmPassword">Confirm Password</label>
             </div>
             <input
               onChange={handleChange}
@@ -173,13 +195,15 @@ const Register = () => {
               name="confirmPassword"
               placeholder="Confirm Password"
               value={formValues.confirmPassword}
+              className="text-input"
               required
             />
           </div>
-        </div>
+        </section>
+
         <div className="submit-button-container">
           <button
-            className="submit-button button"
+            className="submit-button"
             disabled={
               !formValues.email ||
               (!formValues.password &&

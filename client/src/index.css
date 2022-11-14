@@ -6,6 +6,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  overflow-x: hidden;
 }
 
 html {
@@ -43,6 +44,11 @@ h2, h3, h4{
   box-shadow: none;
 }
 
+.nav-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 #nav-content{
   display: flex;
@@ -60,21 +66,91 @@ h2, h3, h4{
   display: flex;
  justify-content: center;
   align-items: center;
-  background-color:#d5c3a3;
+  /* background-color:#d5c3a3; */
+  background: rgb(215,129,106);
+  background: linear-gradient(100deg, rgba(215,129,106,1) 0%, rgb(134, 51, 54) 100%);
   padding: .2rem;
 }
 
 
 
 .nav-link{
-font-size: 1.6rem;
-margin: .7rem 1.5rem;
-gap: 1rem;
-padding: .3rem;
-text-decoration: none;
-color: #6885bf;
+  font-size: 1.6rem;
+  margin: .7rem 1rem;
+  gap: .5rem;
+  padding: .2rem;
+  color: #212121;
 }
 
+/* Welcome Page */
+.welcome-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-logo{
+  width: 20rem;
+  margin: 2rem;
+}
+
+#welcome-page-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: .5rem;
+}
+
+.welcome-text{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem 0;
+  
+  font-size: 2rem;
+  color:#3F3F3F;
+}
+
+.welcome-body-container{
+  margin: 0 10rem;
+  font-size: 1.5rem;
+}
+
+.welcome-header-text, .welcome-body-text{
+  margin: 1rem 0;
+}
+
+.welcome-body-text-container{
+  margin: 4rem 0;
+}
+
+.checkmark{
+  margin-right: 1rem;
+}
+
+#welcome-button-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#welcome-button{
+  font-size: 2rem;
+  padding: .2rem 3rem;
+
+  border-radius: 6px;
+  cursor: pointer;
+
+  background-color: #3F3F3F;
+  color: white;
+}
+
+#welcome-button:hover{
+  background-color: #151515;
+}
 /* Home Page */
 #Home{
   display: flex;
@@ -83,17 +159,18 @@ color: #6885bf;
 }
 
 /* Register page */
+.register-container{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align:center;
+  align-items: center;
+}
 
-/* login page */
-.login-container, .register-container{
-  position: absolute;
-  margin: auto;
-  width: 40rem;
-  height: 30rem;
-  top:10rem;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.form-items{
+  justify-content: space-between;
+  width: 50%;
+  height: 35rem;
 
   background: rgb(215,129,106);
   background: linear-gradient(100deg, rgba(215,129,106,1) 0%, rgba(134,22,87,1) 100%);
@@ -101,10 +178,92 @@ color: #6885bf;
   border: 2px solid rgb(147, 147, 147);
 }
 
-.form-items{
+.section-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem 2rem;
+  gap: 1rem;
+  text-align: left;
+}
+
+.single-section-container{
   display: flex;
   flex-direction: column;
-  margin: 3rem 2rem 1rem;
+  align-items: center;
+
+}
+
+.field-container, .single-field-container{
+  display: flex;
+}
+
+.single-field-container{
+  margin: .6rem;
+
+}
+
+.user-container{
+  margin-top: 2rem;
+}
+
+.field-text{
+  font-size: 1.4rem;
+}
+
+.text-input, .text-input-bio{
+  margin: 0 .7rem;
+  padding: 0 .3rem;
+  border-radius: 6px;
+}
+
+.text-input-bio{
+ 
+  padding: .4rem .5rem;
+  
+}
+
+.top-section{
+  margin-top: 2rem;
+}
+
+.submit-button{
+  color: white;
+  background-color: #3F3F3F;
+  border-radius: 5px;
+
+  margin: 1.5rem 10rem 2rem;
+  padding: .5rem 4rem;
+  border: 2px solid rgb(116, 115, 115);
+
+  font-size: 1.5rem;
+}
+
+
+
+/* login page */
+
+.login-container{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align:center;
+  align-items: center;
+
+  margin: 5rem auto;
+}
+
+
+.login-form{
+  justify-content: space-between;
+  width: 100%;
+  height: 30rem;
+  padding: 1rem 1rem;
+
+  background: rgb(215,129,106);
+  background: linear-gradient(100deg, rgba(215,129,106,1) 0%, rgba(134,22,87,1) 100%);
+  border-radius: 10px;
+  border: 2px solid rgb(147, 147, 147);
 }
 
 .input-wrapper{
@@ -120,15 +279,255 @@ color: #6885bf;
   font-size: 1.3rem;
 }
 
+
 .form-button{
   color: white;
   background-color: #3F3F3F;
   border-radius: 5px;
 
-  margin: 0 10rem;
-  margin-top: 8rem;
-  padding: .5rem 1rem;
+  margin: 3rem 10rem 3rem;
+  padding: .5rem 3rem;
   border: 2px solid rgb(116, 115, 115);
 
   font-size: 1.5rem;
 }
+
+/* link to register page */
+
+#register-container{
+  display:flex;
+ flex-direction: column;
+ align-items: center;
+
+ margin-top: 1.5rem;
+}
+
+/* About Us */
+#aU-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10rem auto;
+}
+
+#aU-text{
+  margin: 2rem 10rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 1360px){
+
+/* Register page */
+.register-container{
+  margin: 5rem auto;
+}
+
+.form-items{
+  justify-content:flex-start;
+  width: 60%;
+  height: 44rem;
+ 
+
+}
+
+.section-container{  
+  flex-direction: column;
+  margin: 1rem 2rem;
+}
+
+.single-section-container{
+  align-items:flex-start;
+  margin: 1rem 2rem;
+}
+
+textarea{
+  width: 20rem;
+}
+
+.field-container{
+  margin: .4rem 0;
+}
+
+.single-field-container{
+  margin: 0;
+
+}
+
+.user-container{
+  margin-top: 1.8rem;
+}
+
+.field-text{
+  font-size: 1.4rem;
+}
+
+.text-input, .text-input-bio{
+  margin: 0 .7rem;
+  padding: 0 .3rem;
+  border-radius: 6px;
+}
+
+.text-input-bio{
+ 
+  padding: .4rem .5rem;
+}
+
+.top-section{
+  margin-top: 2rem;
+}
+
+.submit-button{
+
+  margin: 1.5rem 10rem 2rem;
+  padding: .5rem 4rem;
+
+  font-size: 1.5rem;
+}
+
+}
+
+@media (max-width: 890px){
+
+.nav-container{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+
+#nav-content{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 25rem;
+  
+  border-bottom: 2px solid rgb(200, 198, 198);
+  margin: 0;
+ 
+  
+}
+
+#nav-banner{
+  width: 31rem;
+  padding: .2rem;
+}
+
+
+
+.nav-link{
+  font-size: 1.4rem;
+  margin: .7rem 1rem;
+  gap: .5rem;
+  padding: .2rem;
+  color: #212121;
+}
+
+
+/* Register page */
+
+
+.form-items{
+  width: 60%;
+  height: 44rem;
+  margin: 3rem 1rem 3rem 1rem;
+ 
+
+}
+
+.section-container{  
+  margin: 1rem 2rem;
+}
+
+.single-section-container{
+  margin: 1rem 2rem;
+}
+
+textarea{
+  width: 18rem;
+  height: 8rem;
+}
+
+.user-container{
+  margin-top: 1.5rem;
+}
+
+.field-text{
+  font-size: 1.2rem;
+}
+
+
+
+.text-input-bio{
+  padding: .4rem .5rem;
+}
+
+.top-section{
+  margin-top: 1.5rem;
+}
+
+.submit-button{
+  padding: .5rem 3rem;
+  font-size: .8rem;
+}
+
+}
+
+@media (max-width: 750px){
+
+
+  /* Register page */
+  .register-container{
+    margin: 3rem auto;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .form-items{
+    width: 90%;
+    height: 49rem;
+  }
+  
+  .section-container{  
+    margin: 1rem 1rem;
+  }
+  
+  .single-section-container{
+    margin: 1rem 1rem;
+  }
+  
+  textarea{
+    width: 15rem;
+    height: 6rem;
+  }
+  
+  .user-container{
+    margin-top: 1.5rem;
+  }
+  
+  .field-text{
+    font-size: 1.1rem;
+  }
+  
+  .top-section{
+    margin-top: 1.5rem;
+  }
+  
+  .submit-button{
+    position: relative;
+    left: -55px;
+    font-size: 1rem;
+  }
+  
+  }
+
+  @media (max-width: 400px){
+    .form-items{
+      width: 90%;
+      height: 49rem;
+    }
+
+    .submit-button{
+      left: -70px;
+    }
+  }
