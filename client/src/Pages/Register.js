@@ -14,7 +14,7 @@ const Register = () => {
     phoneNumber: '',
     gender: '',
     username: '',
-    password: '',
+    passwordDigest: '',
     confirmPassword: ''
   }
 
@@ -53,7 +53,7 @@ const Register = () => {
       phoneNumber: formValues.phoneNumber,
       gender: formValues.gender,
       username: formValues.username,
-      password: formValues.password
+      passwordDigest: formValues.password
     })
     setFormValues(initialState)
     navigate('/login')
@@ -205,14 +205,14 @@ const Register = () => {
 
           <div className="field-container">
             <div className="field-text">
-              <label htmlFor="gender">Zodiac Sign:</label>
+              <label htmlFor="zodiac">Zodiac Sign:</label>
             </div>
             <select
               onChange={handleChange}
-              name="zodiac"
+              name="zodiacId"
               value={formValues.zodiacId}
               className="text-input"
-              id="other-option"
+              id="zodiac-option"
               required
             >
               <option>Choose a sign</option>
@@ -239,7 +239,7 @@ const Register = () => {
             <input
               onChange={handleChange}
               name="password"
-              type="text"
+              type="password"
               placeholder="Password"
               value={formValues.password}
               className="text-input"
