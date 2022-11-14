@@ -14,7 +14,7 @@ const Register = () => {
     phoneNumber: '',
     gender: '',
     username: '',
-    passwordDigest: '',
+    password: '',
     confirmPassword: ''
   }
 
@@ -53,9 +53,11 @@ const Register = () => {
       phoneNumber: formValues.phoneNumber,
       gender: formValues.gender,
       username: formValues.username,
-      passwordDigest: formValues.password
+      password: formValues.password
     })
+
     setFormValues(initialState)
+
     navigate('/login')
   }
 
@@ -162,7 +164,7 @@ const Register = () => {
             <input
               onChange={handleChange}
               name="image"
-              type="file"
+              type="text"
               id="image-input"
               placeholder="Choose an image"
               value={formValues.image}
@@ -264,6 +266,7 @@ const Register = () => {
 
         <div className="submit-button-container">
           <button
+            type="submit"
             className="submit-button"
             disabled={
               !formValues.email ||

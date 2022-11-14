@@ -1,6 +1,9 @@
 import './index.css'
 
 import { Routes, Route, Navigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+
+import { CheckSession } from './services/Auth'
 
 import Home from './Pages/Home'
 import Welcome from './Pages/Welcome'
@@ -16,19 +19,57 @@ import AboutUs from './Pages/AboutUs'
 import UserProfile from './Pages/UserPage'
 
 function App() {
+  const [authenticated, toggleAuthenticated] = useState(false)
+  const [user, setUser] = useState(null)
+
+  const handleLogOut = () => {
+    //Reset all auth related state and clear localStorage
+    setUser(null)
+    toggleAuthenticated(false)
+    localStorage.clear()
+  }
+
+  const checkToken = async () => {
+    const user = await CheckSession()
+    setUser(user)
+    toggleAuthenticated(true)
+  }
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      checkToken()
+    }
+  }, [])
+
   return (
     <div>
       <div>
         <header>
-          <Nav />
+          <Nav
+            authenticated={authenticated}
+            user={user}
+            handleLogOut={handleLogOut}
+          />
         </header>
         <main>
           <Routes>
-            <Route index element={<Home />} />
+            <Route
+              index
+              element={<Home user={user} authenticated={authenticated} />}
+            />
             <Route path="/welcome" element={<Welcome />} />
             <Route path="/zodiacs" element={<Zodiacs />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
+            <Route
+              path="/login"
+              element={
+                <Login
+                  setUser={setUser}
+                  toggleAuthenticated={toggleAuthenticated}
+                />
+              }
+            />
             <Route path="/user_details/:user_id" element={<User />} />
             <Route
               path="/user_details/:userId/user_profile"
