@@ -1,11 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 import User from '../components/User'
 
-const Home = () => {
+const Home = ({ user, authenticated }) => {
+  const navigate = useNavigate()
+
   const [users, setUsers] = useState([])
 
   useEffect(() => {
@@ -18,21 +20,26 @@ const Home = () => {
     getUsers()
   }, [])
 
-  return (
+  return user && authenticated ? (
     <div id="Home">
       <h1>Zodiac Users</h1>
-      {users.map((user) => (
-        <Link to={`/user_details/${user.id}/user_profile`}>
+      {users.map((account) => (
+        <Link to={`/user_details/${account.id}/user_profile`}>
           <User
-            key={user.id}
-            id={user.id}
-            profilePic={user.image}
-            firstName={user.firstName}
-            lastName={user.lastName}
-            zodiacName={user.user_sign.name}
+            key={account.id}
+            id={account.id}
+            profilePic={account.image}
+            firstName={account.firstName}
+            lastName={account.lastName}
+            zodiacName={account.user_sign.name}
           />
         </Link>
       ))}
+    </div>
+  ) : (
+    <div className="protected">
+      <h3>Oops! You must be logged in to have access to the community!</h3>
+      <button onClick={() => navigate('/login')}>Login</button>
     </div>
   )
 }
