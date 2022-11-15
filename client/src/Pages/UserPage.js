@@ -25,7 +25,7 @@ const UserPage = () => {
         {profile.firstName}&nbsp;
         {profile.lastName}
       </h2>
-      <img src={profile.image}></img>
+      <img src={profile.image} alt={profile.firstName}></img>
       <h3> Description: {profile.description}</h3>
       <h3> Gender: {profile.gender}</h3>
     </div>
