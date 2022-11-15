@@ -10,7 +10,9 @@ const UserPage = () => {
   const [profile, setProfile] = useState(null)
 
   const getProfile = async () => {
-    const response = await axios.get(`http://localhost:3001/api/users${userId}`)
+    const response = await axios.get(
+      `http://localhost:3001/api/users/${userId}`
+    )
     setProfile(response.data)
   }
   useEffect(() => {
