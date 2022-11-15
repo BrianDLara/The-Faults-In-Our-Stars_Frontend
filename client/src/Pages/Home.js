@@ -8,7 +8,7 @@ import User from '../components/User'
 const Home = ({ user, authenticated }) => {
   const navigate = useNavigate()
 
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState(null)
 
   useEffect(() => {
     const getUsers = async () => {
@@ -23,7 +23,7 @@ const Home = ({ user, authenticated }) => {
   return user && authenticated ? (
     <div id="Home">
       <h1>Zodiac Users</h1>
-      {users.map((account) => (
+      {users?.map((account) => (
         <Link to={`/user_details/${account.id}/user_profile`}>
           <User
             key={account.id}
