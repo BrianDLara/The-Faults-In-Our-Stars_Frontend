@@ -10,7 +10,9 @@ const UserPage = () => {
   const [profile, setProfile] = useState(null)
 
   const getProfile = async () => {
-    const response = await axios.get(`http://localhost:3001/api/users${userId}`)
+    const response = await axios.get(
+      `https://the-faults-in-our-stars.herokuapp.com/api/users${userId}`
+    )
     setProfile(response.data)
   }
   useEffect(() => {
@@ -23,7 +25,7 @@ const UserPage = () => {
         {profile.firstName}&nbsp;
         {profile.lastName}
       </h2>
-      <img src={profile.image}></img>
+      <img src={profile.image} alt={profile.firstName}></img>
       <h3> Description: {profile.description}</h3>
       <h3> Gender: {profile.gender}</h3>
     </div>
