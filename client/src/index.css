@@ -156,7 +156,87 @@ h2, h3, h4{
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(242, 242, 242);
 }
+
+/* User */
+.users-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30rem;
+  height: 42rem;
+  margin: 8rem 0;
+}
+
+#user-profilePic{
+  position:absolute;
+  height: 42rem;
+  width: 30rem;
+  border-radius: 7px;
+}
+
+.users-info{
+  display: flex;
+  justify-content:center ;
+  flex-direction: column;
+  position: relative;
+  z-index:10;
+  top: 256px;
+  color: white;
+  padding: 1rem 250rem .5rem;
+  background-color: antiquewhite;
+}
+
+
+.user-txt-container{
+  position: relative;
+  left: -150px;
+  margin: 1rem 0;
+  background-color: aqua;
+}
+
+#user-name{
+  display:flex;
+  flex-direction: row;
+  position: relative;
+  left: 80px;
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+
+#zodiacSign{
+  display: flex;
+  position: relative;
+  top: 0px;
+  left: 80px;
+  padding:0 1rem;
+}
+
+.icons-container{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: -10px;
+}
+
+.icon-card{
+position: relative;
+margin: .5rem 3rem;
+}
+
+.circle-icon{
+  position: relative
+}
+
+.option-icon{
+  position: absolute;
+  left: 15px;
+  top: 16px;
+}
+
+
 
 /* Register page */
 .register-container{
@@ -338,51 +418,64 @@ input::file-selector-button{
   font-size: 2rem;
 }
 
-/* User */
-.user-container{
+/* Zodiac Signs Page */
+
+.zodiac-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  margin: 3rem auto;
-
 }
 
-.user-txt-container{
+.zodiac-header{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin: 1rem 0;
 }
 
-/* Zodiac Signs Page */
-.zodiac-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center ;
+.zodiac-main{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
+  margin: 1rem;
+  width: 100rem;
+  height: 150rem;
+  justify-content: center;
   align-items: center;
-  margin: 5rem auto;
-  padding-bottom: 0rem;
-  
-  width: 30%;
-  height: 35rem;
+ 
+  gap: 8%;
+  margin-bottom: 8rem;
+}
 
-  border: 1px solid rgb(207, 203, 203);
-border-radius: 6px;
+.zodiac-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+  height: 25rem;
+
+  overflow:hidden;
+ 
+  border-radius: 5px;
+  border: 2px solid rgb(165, 164, 164);
 }
 
 #zodiac-pic{
   background-position: center;
   background-repeat: no-repeat;
-  background-size:cover;
-  width:100%;
+  background-size:contain;
+  margin-bottom: 2rem 0 7rem;
+  width:95%;
+  height: 10rem;
+
  
 }
 
 #zodiac-name{
 margin: 5rem 0 2rem;
 font-size: 3rem;
+color: black;
+
 }
 
 .protected {
@@ -391,6 +484,30 @@ font-size: 3rem;
   justify-content: center;
   align-items: center;
   height: 80vh;
+}
+
+/* New Review Form */
+.review-container{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align:center;
+  align-items: center;
+
+  margin: 5rem auto;
+}
+
+
+.review-form{
+  justify-content: space-between;
+  width: 100%;
+  height: 50rem;
+  padding: 1rem 1rem;
+
+  background: rgb(215,129,106);
+  background: linear-gradient(100deg, rgba(215,129,106,1) 0%, rgba(134,22,87,1) 100%);
+  border-radius: 10px;
+  border: 2px solid rgb(147, 147, 147);
 }
 
 
@@ -434,9 +551,7 @@ textarea{
 
 }
 
-.user-container{
-  margin-top: 1.8rem;
-}
+
 
 .field-text{
   font-size: 1.4rem;
@@ -503,9 +618,7 @@ textarea{
   height: 8rem;
 }
 
-.user-container{
-  margin-top: 1.5rem;
-}
+
 
 .field-text{
   font-size: 1.2rem;
@@ -524,6 +637,68 @@ textarea{
 .submit-button{
   padding: .5rem 3rem;
   font-size: .8rem;
+}
+
+
+
+/* zodiac cards */
+
+.zodiac-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.zodiac-header{
+  display: flex;
+  flex-direction: column;
+}
+
+.zodiac-main{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
+  margin: 1rem;
+  width: 100rem;
+  height: 150rem;
+  justify-content: center;
+  align-items: center;
+ 
+  gap: 4%;
+  margin-bottom: 8rem;
+}
+
+.zodiac-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+  height: 25rem;
+
+  overflow:hidden;
+ 
+  border-radius: 5px;
+  border: 2px solid rgb(165, 164, 164);
+}
+
+#zodiac-pic{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  margin-bottom: 2rem 0 7rem;
+  width:95%;
+  height: 10rem;
+
+ 
+}
+
+#zodiac-name{
+margin: 5rem 0 2rem;
+font-size: 3rem;
+color: black;
+
 }
 
 }
@@ -557,9 +732,7 @@ textarea{
     height: 6rem;
   }
   
-  .user-container{
-    margin-top: 1.5rem;
-  }
+  
   
   .field-text{
     font-size: 1.1rem;

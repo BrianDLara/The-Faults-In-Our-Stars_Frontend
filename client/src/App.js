@@ -10,13 +10,14 @@ import Welcome from './Pages/Welcome'
 import Nav from './components/Nav'
 import Zodiacs from './Pages/Zodiacs'
 import ZodiacDetails from './Pages/ZodiacDetails'
-import ReviewForm from './Pages/ReviewForm'
+import NewReviewForm from './Pages/NewReviewForm'
+import EditReviewForm from './Pages/EditReviewForm'
 import User from './components/User'
 import Register from './Pages/Register'
 import Login from './Pages/Login'
 import Profile from './Pages/Profile'
 import AboutUs from './Pages/AboutUs'
-import UserProfile from './Pages/UserPage'
+import UserPage from './Pages/UserPage'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -57,10 +58,16 @@ function App() {
             <Route
               index
               element={<Home user={user} authenticated={authenticated} />}
+              // element={<Home />}
             />
             <Route path="/welcome" element={<Welcome />} />
             <Route path="/zodiacs" element={<Zodiacs />} />
             <Route path="/register" element={<Register />} />
+            <Route
+              path="/profile"
+              element={<Profile user={user} authenticated={authenticated} />}
+            />
+            {/* <Route path="/login" element={<Login />} /> */}
             <Route
               path="/login"
               element={
@@ -73,10 +80,22 @@ function App() {
             <Route path="/user_details/:user_id" element={<User />} />
             <Route
               path="/user_details/:userId/user_profile"
-              element={<UserProfile />}
+              element={<UserPage />}
             />
-            <Route path="/zodiacs/details/form" element={<ReviewForm />} />
-            <Route path="/zodiacs/details/:id" element={<ZodiacDetails />} />
+            <Route
+              path="/zodiacs/details/:zodiacId"
+              element={<ZodiacDetails user={user} />}
+            />
+            <Route
+              path="/edit_review/user_id/:userId/zodiac_id/:zodiacId/review_id/:reviewId"
+              element={<EditReviewForm />}
+            />
+            <Route
+              path="/new_review/user_id/:userId/zodiac_id/:zodiacId"
+              element={
+                <NewReviewForm user={user} authenticated={authenticated} />
+              }
+            />
             <Route path="/about_us" element={<AboutUs />} />
           </Routes>
         </main>
