@@ -536,52 +536,28 @@ textarea{
   display: none;
 }
 
-#menu_toggle:checked + .menu_btn .top-bun{
- transform:rotate(-45deg);
- margin-top:25px;
-}
-#menu_toggle:checked + .menu_btn .bottom-bun {
-  opacity:0;
-  transform:rotate(45deg);
- }
- #menu_toggle:checked + .menu_btn .meat{
-  transform:rotate(45deg);
-  margin-top: -7px;
- }
-  #menu_toggle:checked  ~ .menu_box{
-left:100% !important;
- }
+
  .menu_btn{
   position: absolute;
-  top: 60px;
-  right: 20px;
+  top: 5em;
+  right: 5%;
   margin-left: -2em;
-  margin-top: -45px;
-  width: 26px;
-  height: 26px;
+  margin-top: -47px;
+  width:2em;
+  height: 45px;
   cursor: pointer;
-  z-index: 5;
+  z-index: 1;
  }
-.menu_btn > span,
-.menu_btn > span::before,
-.menu_btn > span::after{
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
+.menu_btn div{
+  position: relative;
+  width:3em;
+  height: 7px;
+  border-radius: 3px;
   background-color: blueviolet;
+  margin-top: 8px;
 transition-duration: .25s;  
 }
- .menu_btn > span::before{
-  content: '';
-  top: -8px;
 
- }
- .menu_btn > span::after{
-  content: '';
-  top: -8px;
-  
- }
 
  .menu_box{
   display: block;
@@ -611,7 +587,21 @@ transition-duration: .25s;
 .nav-link:hover{
 background-color: rgb(7, 10, 9);
 }
-
+#menu_toggle:checked + .menu_btn .top-bun{
+  transform:rotate(-45deg);
+  margin-top:25px;
+ }
+ #menu_toggle:checked + .menu_btn .bottom-bun {
+   opacity:0;
+   transform:rotate(45deg);
+  }
+  #menu_toggle:checked + .menu_btn .meat{
+   transform:rotate(45deg);
+   margin-top: -7px;
+  }
+   #menu_toggle:checked  ~ .menu_box{
+ left:100% !important;
+  }
 
 .login-link{
   font-size: 1.4rem;

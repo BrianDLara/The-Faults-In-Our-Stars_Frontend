@@ -7,10 +7,11 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
     authenticatedOptions = (
       <div class="hamburger-menu">
         <input id="menu_toggle" type="checkbox"/>
-        <label class="menu_btn" for="menu_toggle">
-          <span class="top-bun"></span>
-          <span class="meat"></span>
-          <span class="bottom-bun"></span>
+
+        <label for="menu_toggle" class="menu_btn" >
+          <div class="top-bun"></div>
+          <div class="meat"></div>
+          <div class="bottom-bun"></div>
          
         </label>
 
