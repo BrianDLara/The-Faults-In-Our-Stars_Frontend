@@ -3,21 +3,9 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-// import {
-//   CheckSession,
-//   CreateReview,
-//   DestroyReview,
-//   UpdateReview
-// } from './services/Auth'
 import Reviews from '../components/Reviews'
 
 const ZodiacDetails = ({ userId, user }) => {
-  // const initialReviewState = {
-  //   rating: '',
-  //   description: '',
-  //   zodiacId: '',
-  //   userId: ''
-  // }
   const { zodiacId } = useParams()
   const [reviews, setReviews] = useState(null)
 
