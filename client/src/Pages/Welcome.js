@@ -12,8 +12,10 @@ const Welcome = () => {
           width="10rem"
         />
         <div className="welcome-text">
-          <h2>Welcome to The Faults In Our Stars</h2>
-          <h4 className="welcome-header-text">Please follow this rules</h4>
+          <h2>The Faults In Our Stars</h2>
+          <h4 className="welcome-header-text">
+            Please follow these guidelines
+          </h4>
         </div>
       </header>
 
