@@ -532,17 +532,17 @@ textarea{
 @media (max-width: 890px){
 /*Hamburger CSS */
 
-#menu_toggle{
-  opacity:0;
-}
-#menu_toggle:checked + .menu_btn > span {
+
+
+#menu_toggle:checked + .menu_btn .top-bun{
  transform:rotate(45deg);
+ margin-top:25px;
 }
-#menu_toggle:checked + .menu_btn > span::before {
+#menu_toggle:checked + .menu_btn .bottom-bun {
   top:0;
   transform:rotate(0deg);
  }
- #menu_toggle:checked + .menu_btn > span::after {
+ #menu_toggle:checked + .menu_btn .meat{
   top:0;
   transform:rotate(90deg);
  }

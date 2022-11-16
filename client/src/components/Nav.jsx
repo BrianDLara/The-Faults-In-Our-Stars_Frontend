@@ -8,7 +8,9 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
       <div class="hamburger-menu">
         <input id="menu_toggle" type="checkbox"/>
         <label class="menu_btn" for="menu_toggle">
-          <span></span>
+          <span class="top-bun"></span>
+          <span class="meat"></span>
+          <span class="bottom-bun"></span>
          
         </label>
 
