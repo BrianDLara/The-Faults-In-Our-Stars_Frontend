@@ -34,14 +34,16 @@ const ZodiacDetails = ({ userId, user }) => {
   return zodiac !== null ? (
     <div className="zodiac-details-container">
       <section>
-        <div className="ZodiacDetails" key={zodiac.id} id={zodiac.id}>
-          <h2> {zodiac.name} </h2>
-          <img
-            className="zodiac-details-image"
-            src={zodiac.image}
-            alt={zodiac.name}
-          />
-          <h3> {zodiac.description} </h3>
+        <div className="zodiacDetails" key={zodiac.id} id={zodiac.id}>
+          <h2 className="zodiac-details-title"> {zodiac.name} </h2>
+          <div className="zodiac-details-image-container">
+            <img
+              className="zodiac-details-image"
+              src={zodiac.image}
+              alt={zodiac.name}
+            />
+          </div>
+          <h3 className="zodiac-details-text"> {zodiac.description} </h3>
         </div>
       </section>
       <h1>Reviews</h1>

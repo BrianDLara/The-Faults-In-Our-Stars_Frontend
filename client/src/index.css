@@ -643,16 +643,40 @@ color: black;
   margin: 3rem auto;
 }
 
-.zodiac-details-image{
-  /* position: relative;
-  left: 25%; */
-  /* display: flex;
-  flex-direction: center;
-  align-items: center; */
+.zodiacDetails{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10rem;
+}
+
+.zodiac-details-image-container{
   width: 30rem;
   height: 30rem;
   border-radius: 50%;
   border: 1px solid black;
+  margin-bottom: 4rem;
+}
+
+.zodiac-details-title{
+  margin-bottom: 4rem;
+  font-size: 4rem;
+}
+
+.zodiac-details-text{
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.zodiac-details-image{
+  position: relative;
+  top: 120px;
+  left: 50px;
+  width: 25rem;
+  height: 15rem;
+
+  
 }
 
 /* New Review Form */

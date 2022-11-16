@@ -2,12 +2,18 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const User = ({id, firstName, lastName, zodiacName, profilePic}) => {
+
+  const getRandomAge = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+  
+
   return (
     <div className='users-card' key={id}>
       <img src={profilePic} alt={`of ${firstName} ${lastName}`}  id="user-profilePic" /> 
         <div className='users-info'> 
           <div className='user-txt-container'> 
-            <h2 id="user-name">{firstName} &nbsp; <p className='user-age'>34</p></h2>
+            <h2 id="user-name">{firstName} &nbsp; <p className='user-age'>{getRandomAge(18,40)}</p></h2>
             <span id="zodiacSign"> <img src="https://i.imgur.com/TkMTiQu.png" alt="astrology icon" width="22rem"/>&nbsp; <h3>{zodiacName}</h3></span>
           </div>
           <div className='icons-container'> 
