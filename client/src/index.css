@@ -363,6 +363,117 @@ input::file-selector-button{
   font-size: 1.5rem;
 }
 
+/* review section */
+
+  .reviews-container{
+    display: flex;
+    position: relative;
+    left: 0;
+    flex-direction: column;
+    
+    margin: 2rem 1rem;
+    padding: .5rem;
+    border-bottom: 1px solid rgb(200, 198, 198);
+   overflow-y: hidden;
+  }
+  
+  .review-title{
+  margin-bottom: 1.5rem;
+  padding: .5rem 0;
+  color:#6885bf;
+  }
+  
+  .review-description{
+   
+    font-size:20px;
+    width:90%;
+    position: relative;
+    display: inline-block;
+    height: auto;
+    margin-bottom: 2.5rem;
+    /* overflow-y: hidden; */
+  }
+  
+  
+  
+  .review-options{
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    top:33px;
+    left: 80%;
+    width: 10rem;
+    height: auto;
+    padding: 0 1rem; 
+    /* overflow-y: hidden; */
+  }
+
+  .review-rating{
+    position: relative;
+    top: -30px;
+    left: -20px;
+    padding: .5rem .1rem;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color:#6885bf;
+    /* overflow-y: hidden; */
+  }
+
+  .review-rating:hover{
+    border-radius: 6px;
+    border: 1px solid rgb(200, 198, 198);
+    cursor: pointer;
+  
+    background-color: #6885bf;
+    color: white;
+  }
+  
+  .review-link{
+    padding: .5rem .1rem;
+    margin: .15rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color:#6885bf;
+  }
+  
+  .review-link:hover{
+    border-radius: 6px;
+    border: 1px solid rgb(200, 198, 198);
+    cursor: pointer;
+  
+    background-color: #6885bf;
+    color: white;
+  }
+  
+  .review-link-divider{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .review-button{
+    position:absolute;
+    left: 45%;
+  
+    font-size: 1.2rem;
+    color: white;
+    background-color: #768ebe;
+    border-radius: 5px;
+    padding: .5rem 3rem;
+    border: 2px solid rgb(116, 115, 115);
+    cursor: pointer;
+  }
+  
+  .review-button:hover{
+    background-color: #5a719ef3;
+  }
+  
+  
+
 
 
 /* login page */

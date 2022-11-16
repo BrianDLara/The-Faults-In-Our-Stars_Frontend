@@ -42,7 +42,7 @@ const ZodiacDetails = ({ userId, user }) => {
           <h3> {zodiac.description} </h3>
         </div>
       </section>
-
+      <h1>Reviews</h1>
       <section>
         {reviews?.map((review) => (
           <Reviews

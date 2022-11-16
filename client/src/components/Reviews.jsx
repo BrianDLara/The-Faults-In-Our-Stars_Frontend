@@ -29,7 +29,7 @@ const Reviews = ({id, userId, zodiacId, title, description, likes, dislikes}) =>
 
   return (
     <div className='reviews-container'>
-      <div id='review-options'>
+      <div className='review-options'>
         {/* <Link title={props.title} description={props.description} to={`/new_review/user_id/${props.userId}/zodiac_id/${props.zodiacId}/review_id/${props.id}`}>  */}
         <Link  to={`/edit_review/user_id/${userId}/zodiac_id/${zodiacId}/review_id/${id}`}> 
         
@@ -40,8 +40,10 @@ const Reviews = ({id, userId, zodiacId, title, description, likes, dislikes}) =>
       </div>
         <h2 className='review-title'>{title}</h2>
         <h3 className='review-description'>{description}</h3>
-        <h3 className='review-likes'>{likes}</h3>
-        <h3 className='review-dislikes'>{dislikes}</h3>
+        <div className='review-options'> 
+        <h3 className='review-likes review-rating'>Likes:{likes}</h3>
+        <h3 className='review-dislikes review-rating'>Dislikes:{dislikes}</h3>
+        </div>
     </div>
 
 
