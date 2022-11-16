@@ -553,7 +553,7 @@ textarea{
   width:3em;
   height: 7px;
   border-radius: 3px;
-  background-color: blueviolet;
+  background-color: rgb(0, 0, 0);
   margin-top: 8px;
 transition-duration: .25s;  
 }
