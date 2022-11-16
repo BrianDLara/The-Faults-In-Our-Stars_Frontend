@@ -75,7 +75,9 @@ const Welcome = () => {
             />
             Be proactive
           </h3>
-          <h4 className="welcome-body-text">Always report bad behaviour</h4>
+          <h4 className="welcome-body-text">
+            Always report bad behavior-"see something say something"
+          </h4>
         </div>
 
         <div id="welcome-button-container">
