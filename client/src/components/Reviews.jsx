@@ -7,7 +7,7 @@ import { DestroyReview } from '../services/Auth'
 
 
 
-const Reviews = ({id, userId, zodiacId, title, description}) => {
+const Reviews = ({id, userId, zodiacId, title, description, likes, dislikes}) => {
 //   let { productId } = useParams() 
 
   const handleRefresh = () => {
@@ -40,6 +40,8 @@ const Reviews = ({id, userId, zodiacId, title, description}) => {
       </div>
         <h2 className='review-title'>{title}</h2>
         <h3 className='review-description'>{description}</h3>
+        <h3 className='review-likes'>{likes}</h3>
+        <h3 className='review-dislikes'>{dislikes}</h3>
     </div>
 
 

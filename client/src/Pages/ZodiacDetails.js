@@ -52,6 +52,8 @@ const ZodiacDetails = ({ userId, user }) => {
             description={review?.description}
             zodiacId={review?.zodiacId}
             userId={review?.userId}
+            likes={review?.likes}
+            dislikes={review?.dislikes}
           />
         ))}
       </section>

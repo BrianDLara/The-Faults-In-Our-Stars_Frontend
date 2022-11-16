@@ -22,8 +22,17 @@ const Home = ({ user, authenticated }) => {
 
   return user && authenticated ? (
     <div id="Home">
-      <h3>Welcome {user.username}!</h3>
-      <h3>Zodiac Users</h3>
+      <h2 className="welcome-userName">Welcome {user.username}!</h2>
+      <span>
+        <h2>
+          {' '}
+          Choose &nbsp; "
+          <img src={`https://i.imgur.com/aOo2Bcv.png`} alt={`x`} width="20px" />
+          " &nbsp; or &nbsp; "
+          <img src={`https://i.imgur.com/0z8S6Uu.png`} alt={`x`} width="20px" />
+          " &nbsp; to start adding people to your Zodiac Circle 💫
+        </h2>
+      </span>
       {users?.map((account) => (
         <Link to={`/user_details/${account.id}/user_profile`} key={account.id}>
           <User

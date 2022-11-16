@@ -7,7 +7,7 @@ const User = ({id, firstName, lastName, zodiacName, profilePic}) => {
       <img src={profilePic} alt={`of ${firstName} ${lastName}`}  id="user-profilePic" /> 
         <div className='users-info'> 
           <div className='user-txt-container'> 
-            <h2 id="user-name">{firstName} &nbsp; <p>34</p></h2>
+            <h2 id="user-name">{firstName} &nbsp; <p className='user-age'>34</p></h2>
             <span id="zodiacSign"> <img src="https://i.imgur.com/TkMTiQu.png" alt="astrology icon" width="22rem"/>&nbsp; <h3>{zodiacName}</h3></span>
           </div>
           <div className='icons-container'> 

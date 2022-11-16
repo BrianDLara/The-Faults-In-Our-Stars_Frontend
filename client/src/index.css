@@ -156,7 +156,12 @@ h2, h3, h4{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(242, 242, 242);
+  background-color: #eee9e6;
+}
+
+.welcome-userName{
+  font-size: 2.5rem;
+  margin: 3rem 0 4rem;
 }
 
 /* User */
@@ -185,8 +190,8 @@ h2, h3, h4{
   z-index:10;
   top: 256px;
   color: white;
-  padding: 1rem 250rem .5rem;
-  background: linear-gradient(#00000000, #000000);
+  padding: 0 250rem 2.5rem;
+  background: linear-gradient(#0000002f, #000000);
   overflow-y: hidden;
   
   border: transparent;
@@ -211,6 +216,11 @@ h2, h3, h4{
   padding: 0 1rem;
 }
 
+.user-age{
+  font-weight: 200;
+  font-size: 2rem;
+}
+
 #zodiacSign{
   display: flex;
   position: relative;
@@ -228,7 +238,7 @@ h2, h3, h4{
 
 .icon-card{
 position: relative;
-margin: .5rem 3rem;
+margin: .3rem 3rem;
 }
 
 .circle-icon{
@@ -239,6 +249,13 @@ margin: .5rem 3rem;
   position: absolute;
   left: 15px;
   top: 16px;
+}
+
+.option-icon:hover{
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  width:32px;
 }
 
 
