@@ -25,7 +25,6 @@ const Profile = ({ user }) => {
       <img src={profile.image} alt={profile.firstName}></img>
       <h3> Sign: {profile.user_sign.name}</h3>
       <h3> Description: {profile.description}</h3>
-
       <h3> Gender: {profile.gender}</h3>
     </div>
   ) : null

@@ -14,7 +14,6 @@ const ZodiacDetails = ({ userId, user }) => {
       `https://the-faults-in-our-stars.herokuapp.com/api/reviews/zodiac/${zodiacId}`
     )
     setReviews(response.data.reviews)
-    console.log(response.data.reviews)
   }, [zodiacId])
 
   const [zodiac, setZodiac] = useState(' ')
@@ -24,7 +23,6 @@ const ZodiacDetails = ({ userId, user }) => {
       `https://the-faults-in-our-stars.herokuapp.com/api/zodiacs/${zodiacId}`
     )
     setZodiac(response.data)
-    console.log(response.data)
   }, [zodiacId])
 
   useEffect(() => {
@@ -34,11 +32,15 @@ const ZodiacDetails = ({ userId, user }) => {
   }, [getZodiacs, getReviews, user])
 
   return zodiac !== null ? (
-    <div>
+    <div className="zodiac-details-container">
       <section>
         <div className="ZodiacDetails" key={zodiac.id} id={zodiac.id}>
           <h2> {zodiac.name} </h2>
-          <img src={zodiac.image} alt={zodiac.name} />
+          <img
+            className="zodiac-details-image"
+            src={zodiac.image}
+            alt={zodiac.name}
+          />
           <h3> {zodiac.description} </h3>
         </div>
       </section>

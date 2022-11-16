@@ -5,7 +5,6 @@ import axios from 'axios'
 
 const UserPage = () => {
   const { userId } = useParams()
-  console.log({ userId })
 
   const [profile, setProfile] = useState(null)
 

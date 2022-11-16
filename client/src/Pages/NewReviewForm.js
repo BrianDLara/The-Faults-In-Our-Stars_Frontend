@@ -20,8 +20,8 @@ const NewReviewForm = ({ user, authenticated }) => {
     title: '',
     description: '',
     userId: userId,
-    // likes: '',
-    // dislikes: '',
+    likes: 0,
+    dislikes: 0,
     zodiacId: zodiacId
   }
 

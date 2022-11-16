@@ -17,6 +17,8 @@ const EditReviewForm = () => {
   const initialState = {
     title: '',
     description: '',
+    likes: '',
+    dislikes: '',
     userId: userId,
     zodiacId: zodiacId
   }

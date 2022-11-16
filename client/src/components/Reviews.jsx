@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React from 'react'
+import { useState } from 'react';
 import { Link } from 'react-router-dom'
-import { DestroyReview } from '../services/Auth'
+import { DestroyReview, UpdateReview } from '../services/Auth'
 // import { useParams } from 'react-router-dom'
 
 
@@ -19,13 +20,23 @@ const Reviews = ({id, userId, zodiacId, title, description, likes, dislikes}) =>
     handleRefresh();
    
   }
-  
+
+  // add likes and dislikes
+// const [newLikes, setNewLikes] = useState(likes)
+const [newDisLikes, setNewDisLikes] = useState(dislikes)
 
 
+const addLike = async(e) => {
+  e.preventDefault()
+await UpdateReview({id, likes: likes + 1})
+handleRefresh()
+}
 
-
-
-
+const addDislike = async(e) => {
+  e.preventDefault()
+  await UpdateReview({id, dislikes: dislikes + 1})
+  handleRefresh()
+}
 
   return (
     <div className='reviews-container'>
@@ -41,8 +52,9 @@ const Reviews = ({id, userId, zodiacId, title, description, likes, dislikes}) =>
         <h2 className='review-title'>{title}</h2>
         <h3 className='review-description'>{description}</h3>
         <div className='review-options'> 
-        <h3 className='review-likes review-rating'>Likes:{likes}</h3>
-        <h3 className='review-dislikes review-rating'>Dislikes:{dislikes}</h3>
+        <button onClick={addLike} id="like" className='review-likes review-rating'>Likes:{likes}</button>
+        <button onClick={addDislike} id="dislike" className='review-dislikes review-rating'>Dislikes:{dislikes}</button>
+        
         </div>
     </div>
 

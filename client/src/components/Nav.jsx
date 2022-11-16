@@ -5,23 +5,23 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
   let authenticatedOptions
   if (user) {
     authenticatedOptions = (
-      <div class="hamburger-menu">
+      <div className="hamburger-menu">
         <input id="menu_toggle" type="checkbox"/>
 
-        <label for="menu_toggle" class="menu_btn" >
-          <div class="top-bun"></div>
-          <div class="meat"></div>
-          <div class="bottom-bun"></div>
+        <label htmlFor="menu_toggle" className="menu_btn" >
+          <div className="top-bun"></div>
+          <div className="meat"></div>
+          <div className="bottom-bun"></div>
          
         </label>
 
-      <nav class= "menu_box">
-        <NavLink to = '/' className="nav-link">  Home </NavLink>
-        <NavLink onClick={handleLogOut} to="/" className="nav-link">Sign Out</NavLink>
-        <NavLink to = '/zodiacs' className="nav-link">   Zodiac Signs </NavLink>
-        <NavLink to = '/profile' className="nav-link"> Profile </NavLink>
-        <NavLink to = '/about_us' className="nav-link"> About Us </NavLink>
-      </nav>
+        <nav className= "menu_box">
+          <NavLink to = '/' className="nav-link">  Home </NavLink>
+          <NavLink onClick={handleLogOut} to="/" className="nav-link">Sign Out</NavLink>
+          <NavLink to = '/zodiacs' className="nav-link">   Zodiac Signs </NavLink>
+          <NavLink to = '/profile' className="nav-link"> Profile </NavLink>
+          <NavLink to = '/about_us' className="nav-link"> About Us </NavLink>
+        </nav>
       </div>
     )
   }
