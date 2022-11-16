@@ -17,7 +17,7 @@ const Profile = ({ user }) => {
   }, [])
 
   return profile !== null ? (
-    <div>
+    <div className="user-info">
       <h2>
         {profile.firstName}&nbsp;
         {profile.lastName}
