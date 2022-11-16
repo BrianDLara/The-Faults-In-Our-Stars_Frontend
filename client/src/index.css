@@ -532,31 +532,35 @@ textarea{
 @media (max-width: 890px){
 /*Hamburger CSS */
 
-
+#menu_toggle{
+  display: none;
+}
 
 #menu_toggle:checked + .menu_btn .top-bun{
- transform:rotate(45deg);
+ transform:rotate(-45deg);
  margin-top:25px;
 }
 #menu_toggle:checked + .menu_btn .bottom-bun {
-  top:0;
-  transform:rotate(0deg);
+  opacity:0;
+  transform:rotate(45deg);
  }
  #menu_toggle:checked + .menu_btn .meat{
-  top:0;
-  transform:rotate(90deg);
+  transform:rotate(45deg);
+  margin-top: -7px;
  }
   #menu_toggle:checked  ~ .menu_box{
 left:100% !important;
  }
  .menu_btn{
-  position: fixed;
+  position: absolute;
   top: 60px;
   right: 20px;
+  margin-left: -2em;
+  margin-top: -45px;
   width: 26px;
   height: 26px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 5;
  }
 .menu_btn > span,
 .menu_btn > span::before,
