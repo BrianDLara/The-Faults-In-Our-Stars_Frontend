@@ -28,9 +28,9 @@ const NewReviewForm = ({ user, authenticated }) => {
   const [formState, setFormState] = useState(initialState)
 
   //refreshes the page. It will be used after submitting a form
-  const handleRefresh = () => {
-    window.location.reload(false)
-  }
+  // const handleRefresh = () => {
+  //   window.location.reload(false)
+  // }
 
   //assigns the form inputs to the appropriate keys.
   const handleChange = (event) => {
@@ -46,7 +46,7 @@ const NewReviewForm = ({ user, authenticated }) => {
     // )
     await CreateReview({ ...formState })
     navigate(`/zodiacs/details/${zodiacId}`)
-    handleRefresh()
+    // handleRefresh()
   }
 
   return user && authenticated ? (

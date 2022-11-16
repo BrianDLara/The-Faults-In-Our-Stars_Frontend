@@ -25,7 +25,7 @@ const Home = ({ user, authenticated }) => {
       <h3>Welcome {user.username}!</h3>
       <h3>Zodiac Users</h3>
       {users?.map((account) => (
-        <Link to={`/user_details/${account.id}/user_profile`}>
+        <Link to={`/user_details/${account.id}/user_profile`} key={account.id}>
           <User
             key={account.id}
             id={account.id}

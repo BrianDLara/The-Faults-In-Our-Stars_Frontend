@@ -47,8 +47,8 @@ const EditReviewForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await UpdateReview({ ...formState })
-    // navigate(`/zodiacs/details/${zodiacId}`)
-    // handleRefresh()
+    navigate(`/zodiacs/details/${zodiacId}`)
+    handleRefresh()
   }
 
   return (

@@ -31,6 +31,7 @@ const Zodiacs = () => {
               zodiacName={zodiac.name}
               image={zodiac.image}
               description={zodiac.description}
+              zodiacId={zodiac.id}
             />
           </Link>
         ))}

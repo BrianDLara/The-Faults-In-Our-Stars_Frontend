@@ -63,6 +63,10 @@ function App() {
             <Route path="/welcome" element={<Welcome />} />
             <Route path="/zodiacs" element={<Zodiacs />} />
             <Route path="/register" element={<Register />} />
+            <Route
+              path="/profile"
+              element={<Profile user={user} authenticated={authenticated} />}
+            />
             {/* <Route path="/login" element={<Login />} /> */}
             <Route
               path="/login"
@@ -79,7 +83,7 @@ function App() {
               element={<UserPage />}
             />
             <Route
-              path="/zodiacs/details/:id"
+              path="/zodiacs/details/:zodiacId"
               element={<ZodiacDetails user={user} />}
             />
             <Route

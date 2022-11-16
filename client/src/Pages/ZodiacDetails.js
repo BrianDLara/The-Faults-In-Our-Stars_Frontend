@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 // import {
@@ -11,38 +11,39 @@ import { Link } from 'react-router-dom'
 // } from './services/Auth'
 import Reviews from '../components/Reviews'
 
-const ZodiacDetails = ({ user }) => {
+const ZodiacDetails = ({ userId, user }) => {
   // const initialReviewState = {
   //   rating: '',
   //   description: '',
   //   zodiacId: '',
   //   userId: ''
   // }
-  const { id } = useParams()
+  const { zodiacId } = useParams()
   const [reviews, setReviews] = useState(null)
 
-  const getReviews = async () => {
+  const getReviews = useCallback(async () => {
     const response = await axios.get(
-      `https://the-faults-in-our-stars.herokuapp.com/api/reviews/zodiac/${id}`
+      `https://the-faults-in-our-stars.herokuapp.com/api/reviews/zodiac/${zodiacId}`
     )
     setReviews(response.data.reviews)
     console.log(response.data.reviews)
-  }
+  }, [zodiacId])
 
   const [zodiac, setZodiac] = useState(' ')
 
-  const getZodiacs = async () => {
+  const getZodiacs = useCallback(async () => {
     const response = await axios.get(
-      `https://the-faults-in-our-stars.herokuapp.com/api/zodiacs/${id}`
+      `https://the-faults-in-our-stars.herokuapp.com/api/zodiacs/${zodiacId}`
     )
     setZodiac(response.data)
-  }
+    console.log(response.data)
+  }, [zodiacId])
 
   useEffect(() => {
     getZodiacs()
 
     getReviews()
-  }, [])
+  }, [getZodiacs, getReviews, user])
 
   return zodiac !== null ? (
     <div>
@@ -77,7 +78,7 @@ const ZodiacDetails = ({ user }) => {
 
       <Link
         type="button"
-        to={`/new_review/user_id/${user.id}/zodiac_id/${zodiac.id}`}
+        to={`/new_review/user_id/${user?.id}/zodiac_id/${zodiacId}`}
       >
         <button className="review-button">Add Review</button>
       </Link>

@@ -156,7 +156,87 @@ h2, h3, h4{
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(242, 242, 242);
 }
+
+/* User */
+.users-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30rem;
+  height: 42rem;
+  margin: 8rem 0;
+}
+
+#user-profilePic{
+  position:absolute;
+  height: 42rem;
+  width: 30rem;
+  border-radius: 7px;
+}
+
+.users-info{
+  display: flex;
+  justify-content:center ;
+  flex-direction: column;
+  position: relative;
+  z-index:10;
+  top: 256px;
+  color: white;
+  padding: 1rem 250rem .5rem;
+  background-color: antiquewhite;
+}
+
+
+.user-txt-container{
+  position: relative;
+  left: -150px;
+  margin: 1rem 0;
+  background-color: aqua;
+}
+
+#user-name{
+  display:flex;
+  flex-direction: row;
+  position: relative;
+  left: 80px;
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+
+#zodiacSign{
+  display: flex;
+  position: relative;
+  top: 0px;
+  left: 80px;
+  padding:0 1rem;
+}
+
+.icons-container{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: -10px;
+}
+
+.icon-card{
+position: relative;
+margin: .5rem 3rem;
+}
+
+.circle-icon{
+  position: relative
+}
+
+.option-icon{
+  position: absolute;
+  left: 15px;
+  top: 16px;
+}
+
+
 
 /* Register page */
 .register-container{
@@ -338,29 +418,6 @@ input::file-selector-button{
   font-size: 2rem;
 }
 
-/* User */
-.user-container{
- display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 16rem;
-  height: 23rem;
-
-  overflow:hidden;
- 
-  border-radius: 5px;
-  border: 2px solid rgb(165, 164, 164);
-
-}
-
-.user-txt-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 1rem 0;
-}
-
 /* Zodiac Signs Page */
 
 .zodiac-container{
@@ -494,9 +551,7 @@ textarea{
 
 }
 
-.user-container{
-  margin-top: 1.8rem;
-}
+
 
 .field-text{
   font-size: 1.4rem;
@@ -563,9 +618,7 @@ textarea{
   height: 8rem;
 }
 
-.user-container{
-  margin-top: 1.5rem;
-}
+
 
 .field-text{
   font-size: 1.2rem;
@@ -679,9 +732,7 @@ color: black;
     height: 6rem;
   }
   
-  .user-container{
-    margin-top: 1.5rem;
-  }
+  
   
   .field-text{
     font-size: 1.1rem;
