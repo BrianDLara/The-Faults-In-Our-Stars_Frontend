@@ -6,7 +6,6 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
   if (user) {
     authenticatedOptions = (
       <nav>
-        <h3>Welcome {user.firstName}!</h3>
         <NavLink to = '/' className="nav-link"> <img src="/images/home-icon.png" alt="home icon" width="20rem"/> Home </NavLink>
         <NavLink onClick={handleLogOut} to="/" className="nav-link">Sign Out</NavLink>
         <NavLink to = '/zodiacs' className="nav-link"> <img src="/images/astrology-icon.png" alt="astrology icon" width="22rem"/> Zodiac Signs </NavLink>

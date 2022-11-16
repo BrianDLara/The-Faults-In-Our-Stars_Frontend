@@ -31,7 +31,8 @@ export const CheckSession = async () => {
 export const CreateReview = async (data) => {
   try {
     const res = await Client.post(
-      '/reviews/new_review/user/:user_id/zodiac_id/:zodiac_id'
+      `/reviews/new_review/user/${data.userId}/zodiac_id/${data.zodiacId}`,
+      data
     )
     return res.data
   } catch (error) {
@@ -50,7 +51,7 @@ export const UpdateReview = async (data) => {
 
 export const DestroyReview = async (data) => {
   try {
-    const res = await Client.delete(`/reviews/${data}`)
+    const res = await Client.delete(`/reviews/${data.id}`, data)
     return res.data
   } catch (error) {
     throw error

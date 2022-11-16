@@ -11,7 +11,7 @@ const UserPage = () => {
 
   const getProfile = async () => {
     const response = await axios.get(
-      `https://the-faults-in-our-stars.herokuapp.com/api/users${userId}`
+      `https://the-faults-in-our-stars.herokuapp.com/api/users/${userId}`
     )
     setProfile(response.data)
   }

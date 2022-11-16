@@ -18,19 +18,23 @@ const Zodiacs = () => {
   }, [])
 
   return (
-    <div id="ZodiacDetails">
-      <h1>Zodiac Signs</h1>
-      {zodiacs.map((zodiac) => (
-        <Link to={`/zodiacs/details/${zodiac.id}`}>
-          <Zodiac
-            key={zodiac.id}
-            id={zodiac.id}
-            zodiacName={zodiac.name}
-            image={zodiac.image}
-            description={zodiac.description}
-          />
-        </Link>
-      ))}
+    <div className="zodiac-container">
+      <header className="zodiac-header">
+        <h1>Zodiac Signs</h1>
+      </header>
+      <main className="zodiac-main">
+        {zodiacs.map((zodiac) => (
+          <Link to={`/zodiacs/details/${zodiac.id}`}>
+            <Zodiac
+              key={zodiac.id}
+              id={zodiac.id}
+              zodiacName={zodiac.name}
+              image={zodiac.image}
+              description={zodiac.description}
+            />
+          </Link>
+        ))}
+      </main>
     </div>
   )
 }
