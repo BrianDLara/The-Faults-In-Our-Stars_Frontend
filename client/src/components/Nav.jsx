@@ -5,13 +5,19 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
   let authenticatedOptions
   if (user) {
     authenticatedOptions = (
-      <nav>
-        <NavLink to = '/' className="nav-link"> <img src="/images/home-icon.png" alt="home icon" width="20rem"/> Home </NavLink>
+      <div class="hamburger-menu">
+        <input id="menu_toggle" type="checkbox"/>
+        <label class="menu_btn" for="menu_toggle">
+          <span></span>
+        </label>
+      <nav class= "menu_box">
+        <NavLink to = '/' className="nav-link">  Home </NavLink>
         <NavLink onClick={handleLogOut} to="/" className="nav-link">Sign Out</NavLink>
-        <NavLink to = '/zodiacs' className="nav-link"> <img src="/images/astrology-icon.png" alt="astrology icon" width="22rem"/> Zodiac Signs </NavLink>
-        <NavLink to = '/profile' className="nav-link"> <img src="/images/profile-icon.png" alt="profile icon" width="20rem"/> Profile </NavLink>
+        <NavLink to = '/zodiacs' className="nav-link">   Zodiac Signs </NavLink>
+        <NavLink to = '/profile' className="nav-link"> Profile </NavLink>
         <NavLink to = '/about_us' className="nav-link"> About Us </NavLink>
       </nav>
+      </div>
     )
   }
  
@@ -27,7 +33,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
       {/* Marquee banner */}
       <span id='nav-banner'>
         <marquee> 
-          <h4 id='nav-banner-text'>The stars are about to line. Learn about your zodiac sign NOW!!!</h4>
+          <h4 id='nav-banner-text'>The stars are about to align. What will the stars tell you?</h4>
         </marquee>
       </span>
         {/* Header */}
