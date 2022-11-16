@@ -187,6 +187,13 @@ h2, h3, h4{
   color: white;
   padding: 1rem 250rem .5rem;
   background: linear-gradient(#00000028, #000000);
+
+  box-shadow:
+      0 0 4px rgb(0, 0, 0),
+      0 0 8px rgb(0, 0, 0),
+      0 0 30px rgb(0, 0, 0),
+      0 0 60px rgb(0, 0, 0);
+
   overflow-y: hidden;
 }
 
