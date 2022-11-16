@@ -12,7 +12,7 @@ const User = ({id, firstName, lastName, zodiacName, profilePic}) => {
           <div className='icons-container'> 
             <div className='icon-card'> 
               <img src={`https://i.imgur.com/soJ17a8.png`} alt={`red circle`} width="60px" className='circle-icon'/> 
-              <img src={`https://i.imgur.com/0QsuLtG.jpg`} alt={`x`} width="30px" className='option-icon'/> 
+              <img src={`https://i.imgur.com/aOo2Bcv.png`} alt={`x`} width="30px" className='option-icon'/> 
             </div>
             <div className='icon-card'> 
               <img src={`https://i.imgur.com/tk8nt81.png`} alt={`green circle`} width="60px" className='circle-icon'/> 
