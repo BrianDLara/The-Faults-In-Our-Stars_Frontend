@@ -9,7 +9,9 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
         <input id="menu_toggle" type="checkbox"/>
         <label class="menu_btn" for="menu_toggle">
           <span></span>
+         
         </label>
+
       <nav class= "menu_box">
         <NavLink to = '/' className="nav-link">  Home </NavLink>
         <NavLink onClick={handleLogOut} to="/" className="nav-link">Sign Out</NavLink>
@@ -23,7 +25,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
  
   const publicOptions = (
     <nav>
-      <NavLink to = '/login' className="nav-link"> Login </NavLink>
+      <NavLink to = '/login' className="login-link"> Login </NavLink>
     </nav>
   )
  

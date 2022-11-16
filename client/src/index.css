@@ -76,7 +76,7 @@ h2, h3, h4{
 
 
 
-.nav-link{
+.login-link{
   font-size: 1.6rem;
   margin: .7rem 1rem;
   gap: .5rem;
@@ -609,7 +609,7 @@ background-color: rgb(7, 10, 9);
 }
 
 
-.nav-link{
+.login-link{
   font-size: 1.4rem;
   margin: .7rem 1rem;
   gap: .5rem;
