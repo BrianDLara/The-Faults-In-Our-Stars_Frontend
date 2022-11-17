@@ -23,7 +23,7 @@ const Home = ({ user, authenticated }) => {
   return user && authenticated ? (
     <div id="Home">
       <div className="home-text">
-        <h2 className="welcome-userName">Welcome {user.username}!</h2>
+        <h2 className="welcome-userName medieval">Welcome {user.username}!</h2>
         <span>
           <h2>
             {' '}

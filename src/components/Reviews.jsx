@@ -1,9 +1,8 @@
-import axios from 'axios';
+
 import React from 'react'
-import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { DestroyReview, UpdateReview } from '../services/Auth'
-// import { useParams } from 'react-router-dom'
+
 
 
 
@@ -20,11 +19,6 @@ const Reviews = ({id, userId, zodiacId, title, description, likes, dislikes}) =>
     handleRefresh();
    
   }
-
-  // add likes and dislikes
-// const [newLikes, setNewLikes] = useState(likes)
-const [newDisLikes, setNewDisLikes] = useState(dislikes)
-
 
 const addLike = async(e) => {
   e.preventDefault()
