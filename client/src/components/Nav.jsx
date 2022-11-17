@@ -38,7 +38,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
       {/* Marquee banner */}
       <span id='nav-banner'>
         <marquee> 
-          <h4 id='nav-banner-text'>The stars are about to align. What will the stars tell you?</h4>
+          <h4 id='nav-banner-text'>The stars are about to align. What will they tell you?</h4>
         </marquee>
       </span>
         {/* Header */}

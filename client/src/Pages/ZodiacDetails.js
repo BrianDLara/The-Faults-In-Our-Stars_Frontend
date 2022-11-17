@@ -53,6 +53,7 @@ const ZodiacDetails = ({ userId, user }) => {
             id={review?.id}
             key={review?.id}
             rating={review?.name}
+            title={review?.title}
             description={review?.description}
             zodiacId={review?.zodiacId}
             userId={review?.userId}

@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 const User = ({id, firstName, lastName, zodiacName, profilePic}) => {
 
@@ -7,8 +9,21 @@ const User = ({id, firstName, lastName, zodiacName, profilePic}) => {
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
   
+  // toggle show and hide
+  const [isShown, setIsShown] = useState(true);
 
-  return (
+  
+  useEffect(() => {
+    window.localStorage.setItem('Hide_Users_From_View', JSON.stringify(isShown))
+  }, [isShown])
+  
+  useEffect(() => {
+    const data = window.localStorage.getItem('Hide_Users_From_View');
+    if (data !== null) 
+      setIsShown(JSON.parse(data))
+    
+  },[])
+  return isShown ? (
     <div className='users-card' key={id}>
       <img src={profilePic} alt={`of ${firstName} ${lastName}`}  id="user-profilePic" /> 
         <div className='users-info'> 
@@ -17,24 +32,25 @@ const User = ({id, firstName, lastName, zodiacName, profilePic}) => {
             <span id="zodiacSign"> <img src="https://i.imgur.com/TkMTiQu.png" alt="astrology icon" width="22rem"/>&nbsp; <h3>{zodiacName}</h3></span>
           </div>
           <div className='icons-container'> 
-            <Link to={`/delete`}>
-            
-            <div className='icon-card'> 
+            <Link to={`/`}>
+          
+            <div className='icon-card' onClick={() => setIsShown(!isShown)}> 
               <img src={`https://i.imgur.com/soJ17a8.png`} alt={`red circle`} width="60px" className='circle-icon'/> 
               <img src={`https://i.imgur.com/aOo2Bcv.png`} alt={`x`} width="30px" className='option-icon'/> 
             </div>
+           
             </Link>
-            <Link to={`/favorite`}> 
+            {/* <Link to={`/favorite`}>  */}
             <div className='icon-card'> 
               <img src={`https://i.imgur.com/tk8nt81.png`} alt={`green circle`} width="60px" className='circle-icon'/> 
               <img src={`https://i.imgur.com/0z8S6Uu.png`} alt={`heart`} width="30px" className='option-icon'/> 
             </div>
-            </Link>
+            {/* </Link> */}
           </div>
         </div>
       
     </div>
-  )
+  ) : null
 }
 
 export default User
