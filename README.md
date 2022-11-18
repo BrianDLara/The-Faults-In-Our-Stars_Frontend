@@ -20,7 +20,7 @@
 
 ### Chris Clarke-Gonzalez
 
-#### [LinkedIn](https://www.linkedin.com/in/sarahduperoux/) | [GitHub](https://github.com/SarahD03)
+#### [LinkedIn](https://www.linkedin.com/in/chris-clarke-gonzalez-03588555//) | [GitHub](https://github.com/sirchclarke)
 
 ---
 
@@ -107,6 +107,7 @@
 
 **Documentation:** [Developer Mozilla](https://developer.mozilla.org/en-US/)
 
-**Css Ideas:** [Scroll-bar](https://www.youtube.com/watch?v=1fEkWd5hzRY), [horizontal-scroll](https://www.youtube.com/watch?v=1fEkWd5hzRY), [carousel](https://www.youtube.com/watch?v=eBKcGAhkZUI), [Scroll-animation](https://alvarotrigo.com/blog/css-animations-scroll/) -->
+**Css Ideas:** [Scroll-bar](https://www.youtube.com/watch?v=1fEkWd5hzRY), [horizontal-scroll](https://www.youtube.com/watch?v=1fEkWd5hzRY), [carousel](https://www.youtube.com/watch?v=eBKcGAhkZUI), [Scroll-animation](https://alvarotrigo.com/blog/css-animations-scroll/)
 
----
+**Burger Ideas:** [Hamburger Nav] (https://alvarotrigo.com/blog/hamburger-menu-css-responsive/)
+-->

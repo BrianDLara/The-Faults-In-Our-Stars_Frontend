@@ -17,15 +17,23 @@ const Profile = ({ user }) => {
   }, [])
 
   return profile !== null ? (
-    <div className="user-info">
-      <h2>
-        {profile.firstName}&nbsp;
-        {profile.lastName}
-      </h2>
-      <img src={profile.image} alt={profile.firstName}></img>
-      <h3> Sign: {profile.user_sign.name}</h3>
-      <h3> Description: {profile.description}</h3>
-      <h3> Gender: {profile.gender}</h3>
+    <div className="profile-container">
+      <div className="profile-card">
+        <h2 className="profile-name">
+          {profile.firstName}&nbsp;
+          {profile.lastName}
+        </h2>
+        <img
+          className="user-profile-image"
+          src={profile.image}
+          alt={profile.firstName}
+        ></img>
+      </div>
+      <div className="profile-info">
+        <h3 className="profile-item"> Sign: {profile.user_sign.name}</h3>
+        <h3 className="profile-item"> Bio: {profile.description}</h3>
+        <h3 className="profile-item"> Gender: {profile.gender}</h3>
+      </div>
     </div>
   ) : null
 }

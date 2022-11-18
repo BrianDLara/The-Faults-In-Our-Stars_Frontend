@@ -8,6 +8,7 @@ import { CheckSession } from './services/Auth'
 import Home from './Pages/Home'
 import Welcome from './Pages/Welcome'
 import Nav from './components/Nav'
+import Footer from './components/Footer'
 import Zodiacs from './Pages/Zodiacs'
 import ZodiacDetails from './Pages/ZodiacDetails'
 import NewReviewForm from './Pages/NewReviewForm'
@@ -24,7 +25,6 @@ function App() {
   const [user, setUser] = useState(null)
 
   const handleLogOut = () => {
-    //Reset all auth related state and clear localStorage
     setUser(null)
     toggleAuthenticated(false)
     localStorage.clear()
@@ -58,7 +58,6 @@ function App() {
             <Route
               index
               element={<Home user={user} authenticated={authenticated} />}
-              // element={<Home />}
             />
             <Route path="/welcome" element={<Welcome />} />
             <Route path="/zodiacs" element={<Zodiacs />} />
@@ -67,7 +66,6 @@ function App() {
               path="/profile"
               element={<Profile user={user} authenticated={authenticated} />}
             />
-            {/* <Route path="/login" element={<Login />} /> */}
             <Route
               path="/login"
               element={
@@ -99,6 +97,9 @@ function App() {
             <Route path="/about_us" element={<AboutUs />} />
           </Routes>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </div>
   )

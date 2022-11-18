@@ -21,8 +21,8 @@ const Home = ({ user, authenticated }) => {
   }, [])
 
   return user && authenticated ? (
-    <div id="Home">
-      <div className="home-text">
+    <div id="home-container">
+      <header className="home-header">
         <h2 className="welcome-userName medieval">Welcome {user.username}!</h2>
         <span>
           <h2>
@@ -42,24 +42,33 @@ const Home = ({ user, authenticated }) => {
             " &nbsp; to start adding people to your Zodiac Circle 💫
           </h2>
         </span>
-      </div>
-      {users?.map((account) => (
-        <Link to={`/user_details/${account.id}/user_profile`} key={account.id}>
-          <User
+      </header>
+      <main className="home-main">
+        {users?.map((account) => (
+          <Link
+            to={`/user_details/${account.id}/user_profile`}
             key={account.id}
-            id={account.id}
-            profilePic={account.image}
-            firstName={account.firstName}
-            lastName={account.lastName}
-            zodiacName={account.user_sign.name}
-          />
-        </Link>
-      ))}
+          >
+            <User
+              key={account.id}
+              id={account.id}
+              profilePic={account.image}
+              firstName={account.firstName}
+              lastName={account.lastName}
+              zodiacName={account.user_sign.name}
+            />
+          </Link>
+        ))}
+      </main>
     </div>
   ) : (
     <div className="protected">
-      <h3>Oops! You must be logged in to have access to the community!</h3>
-      <button onClick={() => navigate('/login')}>Login</button>
+      <h3 className="please-signin">
+        Oops! You must be logged in to have access to the community!
+      </h3>
+      <button className="form-button" onClick={() => navigate('/login')}>
+        Login
+      </button>
     </div>
   )
 }

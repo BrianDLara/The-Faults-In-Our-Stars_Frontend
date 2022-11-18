@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Zodiac = ({id, zodiacName, image, description }) => {
+const Zodiac = ({id, zodiacName, image }) => {
   return (
     <div className='zodiac-card' key={id}>
       <img src={image} alt={`of ${zodiacName}`}  id="zodiac-pic"/> 

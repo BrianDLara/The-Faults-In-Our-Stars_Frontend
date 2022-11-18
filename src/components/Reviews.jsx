@@ -2,36 +2,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { DestroyReview, UpdateReview } from '../services/Auth'
+import { useEffect,useCallback } from 'react'
 
 
 
 
-
-const Reviews = ({id, userId, zodiacId, title, description, likes, dislikes}) => {
-//   let { productId } = useParams() 
-
-  const handleRefresh = () => {
-    window.location.reload(false);
-  }
+const Reviews = ({id, userId, zodiacId, title, description, likes, dislikes, getReviews}) => {
 
   const handleDelete = async () => {
    await DestroyReview({id})
-    handleRefresh();
-   
+    getReviews()
   }
 
 const addLike = async(e) => {
   e.preventDefault()
 await UpdateReview({id, likes: likes + 1})
-handleRefresh()
+  getReviews()
 }
 
 const addDislike = async(e) => {
   e.preventDefault()
   await UpdateReview({id, dislikes: dislikes + 1})
-  handleRefresh()
+  getReviews()
 }
-
+// useEffect(()=>{
+  
+// }, [])
   return (
     <div className='reviews-container'>
       <div className='review-options'>

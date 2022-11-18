@@ -59,18 +59,10 @@ const ZodiacDetails = ({ userId, user }) => {
             userId={review?.userId}
             likes={review?.likes}
             dislikes={review?.dislikes}
+            getReviews={getReviews}
           />
         ))}
       </section>
-      {/* {reviews?.map((review) => (
-        <Link
-          type="button"
-          to={`/new_review/user_id/${user.id}/zodiac_id/${zodiac.id}/review_id/${review.id}`}
-        >
-          <button className="review-button">Add Review</button>
-        </Link>
-      ))} */}
-
       <Link
         type="button"
         to={`/new_review/user_id/${user?.id}/zodiac_id/${zodiacId}`}

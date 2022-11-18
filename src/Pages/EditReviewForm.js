@@ -1,19 +1,17 @@
 import React from 'react'
 
-import { UpdateReview, DestroyReview } from '../services/Auth'
+import { UpdateReview } from '../services/Auth'
 
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 const EditReviewForm = () => {
-  //routed-dom imports
   let navigate = useNavigate()
   let { zodiacId } = useParams()
   let { userId } = useParams()
   let { reviewId } = useParams()
 
-  //initial state of the form with useParams to assign the _id & product_id
   const initialState = {
     title: '',
     description: '',
@@ -35,17 +33,14 @@ const EditReviewForm = () => {
     getReview()
   }, [])
 
-  //refreshes the page. It will be used after submitting a form
   const handleRefresh = () => {
     window.location.reload(false)
   }
 
-  //assigns the form inputs to the appropriate keys.
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
-  //if-else statement that distinguishes between a post-review axios call vs put-review axios call
   const handleSubmit = async (e) => {
     e.preventDefault()
     await UpdateReview({ ...formState })
@@ -56,7 +51,6 @@ const EditReviewForm = () => {
   return (
     <div className="review-container">
       <form onSubmit={handleSubmit} className="review-form">
-        {/* title section */}
         <div className="input-wrapper">
           <label htmlFor="title" className="form-header">
             Write a Headline
@@ -71,7 +65,6 @@ const EditReviewForm = () => {
             className="input"
           />
         </div>
-        {/* description section */}
         <div className="input-wrapper">
           <label htmlFor="description" className="form-header">
             Write a description

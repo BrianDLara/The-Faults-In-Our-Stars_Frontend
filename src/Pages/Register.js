@@ -64,9 +64,7 @@ const Register = () => {
   return (
     <div className="register-container">
       <form className="form-items" onSubmit={handleSubmit}>
-        {/* new user first and last name */}
         <section className="section-container top-section">
-          {/* first name section */}
           <div className="field-container">
             <div className="field-text">
               <label htmlFor="firstName">First Name:</label>
@@ -81,7 +79,6 @@ const Register = () => {
               required
             />
           </div>
-          {/* last name section */}
           <div className="field-container">
             <div className="field-text">
               <label htmlFor="lastName">Last Name: </label>
@@ -97,7 +94,6 @@ const Register = () => {
             />
           </div>
         </section>
-        {/* contact info */}
         <section className="section-container">
           <div className="field-container">
             <div className="field-text">

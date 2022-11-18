@@ -24,7 +24,7 @@ const Zodiacs = () => {
       </header>
       <main className="zodiac-main">
         {zodiacs.map((zodiac) => (
-          <Link to={`/zodiacs/details/${zodiac.id}`}>
+          <Link to={`/zodiacs/details/${zodiac.id}`} key={zodiac.id}>
             <Zodiac
               key={zodiac.id}
               id={zodiac.id}
