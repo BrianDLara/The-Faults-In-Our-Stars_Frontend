@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-
 import User from '../components/User'
 
 const Home = ({ user, authenticated }) => {
@@ -45,19 +44,14 @@ const Home = ({ user, authenticated }) => {
       </header>
       <main className="home-main">
         {users?.map((account) => (
-          <Link
-            to={`/user_details/${account.id}/user_profile`}
+          <User
             key={account.id}
-          >
-            <User
-              key={account.id}
-              id={account.id}
-              profilePic={account.image}
-              firstName={account.firstName}
-              lastName={account.lastName}
-              zodiacName={account.user_sign.name}
-            />
-          </Link>
+            id={account.id}
+            profilePic={account.image}
+            firstName={account.firstName}
+            lastName={account.lastName}
+            zodiacName={account.user_sign.name}
+          />
         ))}
       </main>
     </div>

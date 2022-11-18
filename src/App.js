@@ -1,10 +1,7 @@
 import './index.css'
-
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-
 import { CheckSession } from './services/Auth'
-
 import Home from './Pages/Home'
 import Welcome from './Pages/Welcome'
 import Nav from './components/Nav'

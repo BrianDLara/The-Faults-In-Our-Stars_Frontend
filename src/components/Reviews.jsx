@@ -2,7 +2,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { DestroyReview, UpdateReview } from '../services/Auth'
-import { useEffect,useCallback } from 'react'
 
 
 
@@ -25,13 +24,9 @@ const addDislike = async(e) => {
   await UpdateReview({id, dislikes: dislikes + 1})
   getReviews()
 }
-// useEffect(()=>{
-  
-// }, [])
   return (
     <div className='reviews-container'>
       <div className='review-options'>
-        {/* <Link title={props.title} description={props.description} to={`/new_review/user_id/${props.userId}/zodiac_id/${props.zodiacId}/review_id/${props.id}`}>  */}
         <Link  to={`/edit_review/user_id/${userId}/zodiac_id/${zodiacId}/review_id/${id}`}> 
         
           <button className='review-link'>Edit</button>

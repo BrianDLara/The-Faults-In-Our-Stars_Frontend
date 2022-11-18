@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
 const Profile = ({ user }) => {
@@ -30,9 +29,15 @@ const Profile = ({ user }) => {
         ></img>
       </div>
       <div className="profile-info">
-        <h3 className="profile-item"> Sign: {profile.user_sign.name}</h3>
-        <h3 className="profile-item"> Bio: {profile.description}</h3>
-        <h3 className="profile-item"> Gender: {profile.gender}</h3>
+        <h3 className="profile-item">
+          <span className="text-blue">Sign:</span> {profile.user_sign.name}
+        </h3>
+        <h3 className="profile-item">
+          <span className="text-blue">Bio:</span> {profile.description}
+        </h3>
+        <h3 className="profile-item">
+          <span className="text-blue">Gender:</span> {profile.gender}
+        </h3>
       </div>
     </div>
   ) : null

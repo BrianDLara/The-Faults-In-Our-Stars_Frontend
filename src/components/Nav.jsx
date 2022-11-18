@@ -35,13 +35,11 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
  
   return(  
     <header className = "nav-container">
-      {/* Marquee banner */}
       <span id='nav-banner'>
         <marquee> 
           <h4 id='nav-banner-text'>The stars are about to align. What will they tell you?</h4>
         </marquee>
       </span>
-        {/* Header */}
         <div id='nav-content'>  
           <Link to ={`/`}>
             <img src="https://i.imgur.com/7O8c7S6.png" alt="website logo" className='logo'/>

@@ -5,7 +5,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Reviews from '../components/Reviews'
 
-const ZodiacDetails = ({ userId, user }) => {
+const ZodiacDetails = ({ user }) => {
   const { zodiacId } = useParams()
   const [reviews, setReviews] = useState(null)
 

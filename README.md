@@ -1,8 +1,8 @@
-# The-Faults-In-Our-Stars_Frontend
+# The Faults In Our Stars
 
 ![image](https://askastrology.com/wp-content/uploads/2022/08/Zodiac-Signs.jpg)
 
-## Date: 11/09/2022
+## Date: 11/18/2022
 
 ### Group Members:
 
@@ -27,7 +27,7 @@
 ####
 
 **Website Link:**
-[Heroku](/)
+[Heroku](https://starz-app.herokuapp.com/)
 
 ---
 
@@ -82,15 +82,15 @@
 
 > #### **Home Page**
 
-![image]()
+![image](https://imgur.com/uZVl4v5.jpeg)
 
 > #### **Zodiac Signs Page**
 
-![image]()
+![image](https://imgur.com/bKO85LN.jpeg)
 
-> #### **Reviews Page**
+> #### **Mobile Version**
 
-![image]()
+![image](https://imgur.com/Lw2r22D.jpeg)
 
 ### **_Task Lists_**
 

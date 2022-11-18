@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 
 const User = ({id, firstName, lastName, zodiacName, profilePic}) => {
-
+ 
   const getRandomAge = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
@@ -17,14 +17,19 @@ const User = ({id, firstName, lastName, zodiacName, profilePic}) => {
   
   useEffect(() => {
     const data = window.localStorage.getItem('Hide_Users_From_View');
-    if (data !== null) 
+    if (!data) 
       setIsShown(JSON.parse(data))
     
   },[])
+  const handleSubmit = () => {
+    setIsShown(!isShown)
+  }
   return isShown ? (
     <div className='users-card' key={id}>
      <div className="image-wrapper"> 
+     <Link to={`/user_details/${id}/user_profile`}>
       <img src={profilePic} alt={`of ${firstName} ${lastName}`}  id="user-profilePic" /> 
+      </Link>
       </div>
         <div className='users-info'> 
           <div className='user-txt-container'> 
@@ -33,18 +38,20 @@ const User = ({id, firstName, lastName, zodiacName, profilePic}) => {
           </div>
           <div className='icons-container'> 
             <Link to={`/`}>
-          
-            <div className='icon-card' onClick={() => setIsShown(!isShown)}> 
+            <button className='fun-buttons' onClick={handleSubmit}>
+            <div className='icon-card' > 
               <img src={`https://i.imgur.com/soJ17a8.png`} alt={`red circle`} width="60px" className='circle-icon'/> 
               <img src={`https://i.imgur.com/aOo2Bcv.png`} alt={`x`} width="30px" className='option-icon'/> 
             </div>
-           
+            </button>
             </Link>
             <Link to={`/`}>
-            <div className='icon-card' onClick={() => setIsShown(!isShown)}> 
+            <button className='fun-buttons' onClick={handleSubmit}>
+            <div className='icon-card' > 
               <img src={`https://i.imgur.com/tk8nt81.png`} alt={`green circle`} width="60px" className='circle-icon'/> 
               <img src={`https://i.imgur.com/0z8S6Uu.png`} alt={`heart`} width="30px" className='option-icon'/> 
             </div>
+            </button>
             </Link>
           </div>
         </div>
