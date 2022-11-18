@@ -41,6 +41,12 @@ const UserPage = () => {
         <h3 className="profile-item">
           <p className="text-blue">Gender:</p> {profile.gender}
         </h3>
+        <h3 className="profile-item">
+          <p className="text-blue">E-mail:</p> {profile.email}
+        </h3>
+        <h3 className="profile-item">
+          <p className="text-blue">Zodiac:</p> {profile.user_sign.name}
+        </h3>
       </div>
     </div>
   ) : null

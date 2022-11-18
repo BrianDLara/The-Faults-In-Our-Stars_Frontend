@@ -30,6 +30,9 @@ const Profile = ({ user }) => {
       </div>
       <div className="profile-info">
         <h3 className="profile-item">
+          <span className="text-blue">User Name:</span> {profile.username}
+        </h3>
+        <h3 className="profile-item">
           <span className="text-blue">Sign:</span> {profile.user_sign.name}
         </h3>
         <h3 className="profile-item">
@@ -37,6 +40,12 @@ const Profile = ({ user }) => {
         </h3>
         <h3 className="profile-item">
           <span className="text-blue">Gender:</span> {profile.gender}
+        </h3>
+        <h3 className="profile-item">
+          <span className="text-blue">E-mail:</span> {profile.email}
+        </h3>
+        <h3 className="profile-item">
+          <span className="text-blue">Zodiac:</span> {profile.user_sign.name}
         </h3>
       </div>
     </div>
