@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 import { DestroyReview, UpdateReview } from '../services/Auth'
 
 
-
-
 const Reviews = ({id, userId, zodiacId, title, description, likes, dislikes, getReviews}) => {
 
   const handleDelete = async () => {
