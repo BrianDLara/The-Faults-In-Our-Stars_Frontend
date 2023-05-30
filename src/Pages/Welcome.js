@@ -19,7 +19,7 @@ const Welcome = () => {
         </div>
       </header>
 
-      <body className="welcome-body-container">
+      <main className="welcome-body-container">
         <div className="welcome-body-text-container">
           <h3>
             <img
@@ -85,7 +85,7 @@ const Welcome = () => {
             <button id="welcome-button">I AGREE</button>
           </Link>
         </div>
-      </body>
+      </main>
     </div>
   )
 }
