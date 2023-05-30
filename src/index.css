@@ -359,60 +359,104 @@ overflow-y: hidden;
 
 
 /* Profile Page */
-.profile-container{
+
+.profile-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.profile-card{
+.profile-card {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 3rem auto;
   align-items: center;
-  width: 35%;
-  height: 35%;
-  margin-top: 3rem;
+  width: 60%; 
+  max-width: 400px;
   overflow-y: hidden;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  border: solid rgb(63, 63, 63);
-border-radius: 7px;
+  border-radius: 7px;
 }
 
-.user-profile-image{
+.user-profile-image {
   width: 100%;
-  height: 30rem;
-  object-fit: fill;
+  height: auto;
+  max-height: 300px;
+  object-fit:contain;
 }
 
-.profile-name{
-  padding: .3rem .5rem;
-  margin: .4rem 1rem;
-  font-size: 2.5rem;
-}
-
-.profile-info{
-  padding: .3rem .5rem;
-  margin: 6rem 10rem 3rem 5rem;
-}
-
-.profile-item{
-  
-  padding: .8rem 0;
-  margin: 1.2rem 0;
+.profile-name {
+  padding: 0.5rem;
+  margin: 1rem;
   font-size: 2rem;
-  font-size: 1.5rem;
-  
-  padding: 0 5rem;
+  text-align: center; 
+  color: rgb(70, 120, 199);
 }
 
-.text-blue{
+.profile-info {
+  padding: 0.5rem;
+  margin: 3rem 1rem;
+}
+
+.profile-item {
+  padding: 0.8rem 0;
+  margin: 1.2rem 0;
+  font-size: 1.5rem;
+  text-align: center; 
+}
+
+.text-blue {
   color: rgb(70, 120, 199);
   font-size: 1.6rem;
-  margin: .3rem .3rem .3rem 0;
+  margin: 0.3rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .profile-card {
+    width: 90%;
+  }
 
+  .user-profile-image {
+    max-height: 200px;
+  }
+
+  .profile-name {
+    font-size: 1.8rem;
+  }
+
+  .profile-info {
+    margin: 2rem 1rem;
+  }
+
+  .profile-item {
+    font-size: 1.2rem;
+  }
+
+  .text-blue {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .profile-card {
+    width: 100%;
+  }
+
+  .profile-name {
+    font-size: 1.6rem;
+  }
+
+  .profile-info {
+    margin: 1.5rem 0.5rem;
+  }
+
+  .profile-item {
+    font-size: 1.1rem;
+  }
+
+  .text-blue {
+    font-size: 1.2rem;
+  }
+}
 
 /* Register page */
 .register-container{
@@ -519,52 +563,50 @@ input::file-selector-button{
 
 /* review section */
 
-  .reviews-container{
+  .reviews-container {
     display: flex;
     position: relative;
     left: 0;
     flex-direction: column;
-    
     margin: 2rem 1rem;
-    padding: .5rem;
+    padding: .5rem 2rem;
     border-bottom: 1px solid rgb(200, 198, 198);
-   overflow-y: hidden;
+    overflow-y: hidden;
   }
   
-  .review-title{
-  margin-bottom: 1.5rem;
-  padding: .5rem 0;
-  color:#6885bf;
+  .review-title {
+    margin-bottom: 1.5rem;
+    padding: .5rem 0;
+    color: #6885bf;
+    text-align: left;
   }
   
-  .review-description{
-   
-    font-size:20px;
-    width:90%;
+  .review-description {
+    font-size: 20px;
+    width: 100%;
     position: relative;
     display: inline-block;
     height: auto;
     margin-bottom: 2.5rem;
-    /* overflow-y: hidden; */
+    text-align: left;
   }
   
-  
-  
-  .review-options{
+  .review-options {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    position:relative;
-    top:20px;
-    left: 80%;
+    position: relative;
+    top: 20px;
+    left: 88%;
+    transform: translateX(-50%);
     width: 12rem;
     height: auto;
-    padding: 0 1rem; 
+    padding: 0 1rem;
     z-index: 1;
-    }
-
-  .review-rating{
+  }
+  
+  .review-rating {
     position: relative;
     top: -30px;
     padding: .5rem .1rem;
@@ -573,46 +615,44 @@ input::file-selector-button{
     font-weight: bold;
     background-color: transparent;
     border: 1px solid transparent;
-    color:#6885bf;
+    color: #6885bf;
   }
-
-  .review-rating:hover{
+  
+  .review-rating:hover {
     border-radius: 6px;
     border: 1px solid rgb(200, 198, 198);
     cursor: pointer;
-  
     background-color: #6885bf;
     color: white;
   }
   
-  .review-link{
+  .review-link {
     padding: .5rem .1rem;
     margin: .15rem;
     font-size: 1rem;
     font-weight: bold;
     background-color: transparent;
     border: 1px solid transparent;
-    color:#6885bf;
+    color: #6885bf;
   }
   
-  .review-link:hover{
+  .review-link:hover {
     border-radius: 6px;
     border: 1px solid rgb(200, 198, 198);
     cursor: pointer;
-  
     background-color: #6885bf;
     color: white;
   }
   
-  .review-link-divider{
+  .review-link-divider {
     font-size: 1.5rem;
     font-weight: bold;
   }
   
-  .review-button{
-    position:absolute;
-    left: 45%;
-  
+  .review-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 1.2rem;
     color: white;
     background-color: #768ebe;
@@ -622,13 +662,42 @@ input::file-selector-button{
     cursor: pointer;
   }
   
-  .review-button:hover{
+  .review-button:hover {
     background-color: #5a719ef3;
   }
   
+  @media only screen and (max-width: 768px) {
+    .reviews-container {
+      margin-left: .1rem;
+      padding: .1rem
+    }
+
+    .review-title {
+      padding-top: 2rem;
+    }
   
-
-
+    .review-description {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      padding-top: 1rem;
+    }
+  
+    .review-options {
+      top: auto;
+      left: 0;
+      transform: none;
+      justify-content: space-between;
+      margin-top: .5rem;
+    }
+  
+    .review-button {
+      position: static;
+      margin-top: 1rem;
+      transform: none;
+    }
+  }
 
 /* login page */
 
@@ -709,70 +778,61 @@ input::file-selector-button{
 
 /* Zodiac Signs Page */
 
-.zodiac-container{
+.zodiac-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   background: url("https://i.imgur.com/tYoq279.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.zodiac-header{
+.zodiac-header {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
   color: white;
 }
 
-.zodiac-main{
-  display: grid;
-  grid-template-rows: auto auto auto;
-  grid-template-columns: auto auto auto;
-  margin: 1rem;
-  width: 100rem;
-  height: 150rem;
+.zodiac-main {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
- 
-  gap: 8%;
+  margin: 1rem;
+  gap: 5rem;
   margin-bottom: 8rem;
 }
 
-.zodiac-card{
+.zodiac-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 18rem;
+  width: 90vw;
+  max-width: 18rem;
   height: 25rem;
-
-  overflow:hidden;
- 
+  overflow: hidden;
   background-color: rgba(205, 178, 228, 0.758);
   border-radius: 5px;
   border: 2px solid rgb(165, 164, 164);
 }
 
-#zodiac-pic{
+#zodiac-pic {
   background-position: center;
   background-repeat: no-repeat;
-  background-size:contain;
-  margin-bottom: 2rem 0 7rem;
-  width:95%;
+  background-size: contain;
+  margin-bottom: 2rem;
+  width: 95%;
   height: 10rem;
-  filter: saturate(500%) contrast(800%) brightness(500%) 
-  invert(1) sepia(70%) hue-rotate(180deg); 
- 
+  filter: saturate(500%) contrast(800%) brightness(500%) invert(1) sepia(70%) hue-rotate(180deg);
 }
 
-#zodiac-name{
-margin: 5rem 0 2rem;
-font-size: 3rem;
-color: black;
-
+#zodiac-name {
+  margin: 2rem 0;
+  font-size: 2rem;
+  color: black;
 }
 
 .protected {
@@ -783,8 +843,35 @@ color: black;
   height: 80vh;
 }
 
+@media (max-width: 768px) {
+  .zodiac-main {
+    justify-content: flex-start;
+  }
+
+  .zodiac-card {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .zodiac-main {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .zodiac-card {
+    flex-basis: calc(50% - 2rem);
+    margin-bottom: 2rem;
+  }
+
+  #zodiac-name {
+    font-size: 1.5rem;
+  }
+}
+
 /* zodiac details page */
-.zodiac-details-container{
+
+.zodiac-details-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -792,7 +879,7 @@ color: black;
   margin: 3rem auto;
 }
 
-.zodiacDetails{
+.zodiacDetails {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -800,7 +887,7 @@ color: black;
   margin: 0 15rem;
 }
 
-.zodiac-details-image-container{
+.zodiac-details-image-container {
   width: 30rem;
   height: 30rem;
   border-radius: 50%;
@@ -810,53 +897,102 @@ color: black;
   background: url("https://i.imgur.com/fB53TVA.jpg");
 }
 
-.zodiac-details-title{
+.zodiac-details-title {
   margin-bottom: 4rem;
   font-size: 4rem;
 }
 
-.zodiac-details-text{
+.zodiac-details-text {
   margin-bottom: 2rem;
   font-size: 2rem;
 }
 
-.review-text{
+.review-text {
   margin: 0 20rem 0 3rem;
 }
 
-.zodiac-details-image{
+.zodiac-details-image {
   position: relative;
   top: 120px;
   left: 50px;
   width: 25rem;
   height: 15rem;
+  filter: saturate(500%) contrast(800%) brightness(500%) invert(1) sepia(70%) hue-rotate(180deg);
+}
 
-  filter: saturate(500%) contrast(800%) brightness(500%) 
-  invert(1) sepia(70%) hue-rotate(180deg); 
+@media only screen and (max-width: 768px) {
+  .zodiacDetails {
+    margin: 0 2rem;
+  }
+
+  .zodiac-details-image-container {
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 2rem;
+    background-size: cover;
+  }
+
+  .zodiac-details-title {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .zodiac-details-text {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .review-text {
+    margin: 0 2rem;
+  }
+
+  .zodiac-details-image {
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 15rem;
+    height: auto;
+    max-height: 15rem;
+  }
 }
 
 /* New Review Form */
-.review-container{
+
+.review-container {
   display: flex;
   position: relative;
   flex-direction: column;
-  text-align:center;
+  text-align: center;
   align-items: center;
-
-  margin: 5rem auto;
+  margin: 2rem auto; 
 }
 
+.review-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; 
+  max-width: 400px; 
+  height: auto; 
+  padding: 1rem;
 
-.review-form{
-  justify-content: space-between;
-  width: 100%;
-  height: 50rem;
-  padding: 1rem 1rem;
-
-  background: rgb(215,129,106);
-  background: linear-gradient(100deg, rgba(215,129,106,1) 0%, rgba(134,22,87,1) 100%);
+  background: rgb(215, 129, 106);
+  background: linear-gradient(
+    100deg,
+    rgba(215, 129, 106, 1) 0%,
+    rgba(134, 22, 87, 1) 100%
+  );
   border-radius: 10px;
   border: 2px solid rgb(147, 147, 147);
+}
+
+.review-form button {
+  display: block;
+  width: 80%;
+  margin: 1rem auto; 
 }
 
 /* Footer */
